@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Anton Oshurek](https://up.htmlacademy.ru/htmlcss/31/user/1810375).
-* Наставник: Наставник: [Кирилл Савко](https://htmlacademy.ru/profile/kirill_savko).
+* Наставник: [Кирилл Савко](https://htmlacademy.ru/profile/kirill_savko).
 
 ---
 
