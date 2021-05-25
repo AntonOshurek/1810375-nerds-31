@@ -9,7 +9,149 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="https://via.placeholder.com/150x100" alt="logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">студия</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">клиенты</a>
+                </li>
+                <li>
+                    <a href="catalog.html" target="_blank">магазин</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">контакты</a>
+                </li>
+            </ul>
+            <a href="#" target="_blank">корзина</a>
+        </nav>
+        <div>
+            <!--div for background color заголовок будет спозиционирован под навигацией-->
+            <h1>Магазин готовых шаблонов</h1>
+        </div>
+    </header>
 
+    <main>
+        <section>
+            <h2>Каталог шаблонов сайтов</h2>
+            <div>
+                <div>
+                    <p>Сортировать:</p>
+                    <ul>
+                        <li>По цене</li>
+                        <li>По типу</li>
+                        <li>По названию</li>
+                        <li>
+                            <img src="https://via.placeholder.com/20x20" alt="вниз">
+                            <!--icon-down-dir-->
+                        </li>
+                        <li>
+                            <img src="https://via.placeholder.com/20x20" alt="вверх">
+                            <!--icon-up-dir-->
+                        </li>
+                    </ul>
+                </div>
+                <ul>
+                    <li>
+                        <div></div> <!-- container for circles css and background-->
+                        <img src="https://via.placeholder.com/150x100" alt="проект sedona">
+                    </li>
+                    <li>
+                        <div></div>
+                        <img src="https://via.placeholder.com/150x100" alt="проект pink">
+                    </li>
+                    <li>
+                        <div></div>
+                        <img src="https://via.placeholder.com/150x100" alt="проект borodinski">
+                    </li>
+                    <li>
+                        <div></div>
+                        <img src="https://via.placeholder.com/150x100" alt="проект mishka">
+                    </li>
+                    <li>
+                        <div></div>
+                        <img src="https://via.placeholder.com/150x100" alt="проект a+">
+                    </li>
+                    <li>
+                        <div></div>
+                        <img src="https://via.placeholder.com/150x100" alt="проект kwast">
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">Следующая</a></li>
+                </ul>
+            </div>
+            <form name="form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Сортировка по стоимости, сетки и особенности</legend>
+                    <div>
+                        <label for="the_cost">Стоимость:</label>
+                        <input type="range" min="1" max="100" value="50" id="the_cost">
+                        <label for="from">От</label>
+                        <input id="from" type="text" name="from" placeholder="0" />
+                        <label for="to">До</label>
+                        <input id="to" type="text" name="to" placeholder="100" />
+                    </div>
+                    <div>
+                        <label for="grid">Сетка:</label>
+                        <input type="radio" name="grid" value="1" /> Адаптивная
+                        <input type="radio" name="grid" value="2" /> Фиксированная
+                        <input type="radio" name="grid" value="3" /> Резиновая
+                    </div>
+                    <div>
+                        <label for="features">Особенности:</label>
+                        <input type="checkbox" name="features" value="1" /> Слайдер
+                        <input type="checkbox" name="features" value="2" /> Блок преимуществ
+                        <input type="checkbox" name="features" value="3" /> Новости
+                        <input type="checkbox" name="features" value="4" /> Галерея
+                        <input type="checkbox" name="features" value="5" /> Корзина
+                    </div>
+                    <input type="submit" name="submit" value="ПОКАЗАТЬ" />
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <h2>Где нас найти?</h2>
+            <!--display = "none" - css-->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4867.270615831888!2d16.921728030802896!3d52.413285486124636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cad42c1d4d%3A0x78a2c4b6155b92e7!2sCrafton%20Agencja!5e0!3m2!1sru!2spl!4v1621812986636!5m2!1sru!2spl"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div>
+                <!--position: absolute; after iframe block-->
+                <h4>NЁRDS DESIGN STUDIO</h4>
+                <address>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
+                <a href="tel:+78005558628">+7 800 555-86-28</a>
+                <button type="button">Напишите нам</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a href="#" target="_blank"> <img src="https://via.placeholder.com/150x100" alt="vk"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"> <img src="https://via.placeholder.com/150x100" alt="facebook"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"> <img src="https://via.placeholder.com/150x100" alt="instagram"></a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h4>Давайте дружить, это выгодно!</h4>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
