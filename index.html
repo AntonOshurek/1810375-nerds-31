@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Style CSS-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 
     <!--FONTS-->
-    <!--<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <!--font-family: 'Roboto', sans-serif;-->
 
     <!--favicon-->
@@ -26,167 +29,198 @@
         «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS.
          Профессиональная вёрстка сайтов</a>».</p>-->
 
-    <header>
-        <img src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" target="_blank">студия</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">клиенты</a>
-                </li>
-                <li>
-                    <a href="catalog.html" target="_blank">магазин</a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">контакты</a>
-                </li>
-            </ul>
-        </nav>
-        <a href="#" target="_blank">корзина</a>
-        <section>
-            <h2>Наши предложения!</h2>
+    <header class="header">
+        <div class="top_header">
+            <img src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс">
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li>
+                        <a href="#" target="_blank">студия</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">клиенты</a>
+                    </li>
+                    <li>
+                        <a href="catalog.html" target="_blank">магазин</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" target="_blank" class="cart">
+                <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#A6A6A6"/></svg>
+                корзина</a>
+        </div>
+        <section class="carousel_section">
+            <h2 style="display: none;">Наши предложения!</h2>
             <!--display = "none" - css-->
-            <div>
-                <h2>Долго, дорого,<br>скрупулезно.</h2>
-                <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
-                <button type="button">УЗНАТЬ БОЛЬШЕ</button>
+            <div class="carousel_heder">
+                <div class="carousel_title">
+                    <h2>Долго, дорого,<br>скрупулезно.</h2>
+                    <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                    <a class="link_carousel" href="#" target="_blank">УЗНАТЬ БОЛЬШЕ</a> 
+                </div>
+                <div class="carousel_img">
+                    <img src="img/nerds_index_slide_1.png" width="760" height="431" alt="телефон с красивым дизайном приложения">
+                </div>
             </div>
-            <div>
-                <img src="https://via.placeholder.com/150x100" width="760" height="431"
-                    alt="телефон с красивым дизайном приложения">
-            </div>
-            <div>
-                <input type="radio" name="color" value="1" class="tabs-nav__item is-active" data-tab-name="tab-1" />
-                <!--data atributes for js caorusel-->
+            <div class="carousel_button">
+                <input type="radio" name="color" value="1" class="tabs-nav__item is-active" data-tab-name="tab-1" /> <!--data atributes for js caorusel-->
                 <input type="radio" name="color" value="2" class="tabs-nav__item" data-tab-name="tab-2" />
                 <input type="radio" name="color" value="3" class="tabs-nav__item" data-tab-name="tab-3" />
             </div>
         </section>
-
     </header>
 
-    <main>
-        <section>
-            <h2>Веб-сайты, Приложения, Презентации</h2>
+    <main class="main">
+        <section class="web_offers">
+            <h2 style="display: none;">Веб-сайты, Приложения, Презентации</h2>
             <!--display = "none" - css-->
-            <ul>
-                <li>
-                    <h3>Веб-сайты</h3>
-                    <img src="https://via.placeholder.com/150x100" width="300" height="146"
-                        alt="ноутбук с открытым сайтом">
-                    <p>Мир никогда не будет прежним<br>после того как увидит ваш сайт!</p>
-                    <button type="button" id="btn_offer_1">Заказать</button>
-                </li>
-                <li>
-                    <h3>Приложения</h3>
-                    <img src="https://via.placeholder.com/150x100" width="300" height="146"
-                        alt="телефон с приложением на экране">
-                    <p>Покорите топ-10 приложений<br>в AppStore и Google Play</p>
-                    <button type="button" id="btn_offer_2">Заказать</button>
-                </li>
-                <li>
-                    <h3>Презентации</h3>
-                    <img src="https://via.placeholder.com/150x100" width="300" height="146"
-                        alt="монитор с красивой презентацией">
-                    <p>Вы даже не подозреваете,<br>насколько вы изумительны!</p>
-                    <button type="button" id="btn_offer_3">Заказать</button>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>о нас</h2>
-            <!--display = "none" - css-->
-            <div>
-                <h3>Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</h3>
-                <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
-                    превыше креатива. Работаем не покладая рук, как роботы.</p>
-                <p>Выполняем заказы на разработку:</p>
-                <ul>
-                    <li>Веб-сайтов любой сложности</li>
-                    <li>Мобильных приложений для iOS и Android</li>
-                    <li>Слайдшоу и видео для корпоративных презентаций</li>
-                </ul>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/150x100" width="360" height="208"
-                    alt="красочный логотип дизайн фирмы нёрдс">
-                <p>с 2004 года Любим точность во всем:</p>
-                <ul>
-                    <li>
-                        <span>146%</span>
-                        <p>Уровень<br>самоотдачи</p>
+            <div class="offers_wrap">
+                <ul class="offers_list">
+                    <li class="web_off web_off_1">
+                        <h3>Веб-сайты</h3>
+                        <div class="offer_1_img">
+                            <img src="https://via.placeholder.com/150x100" width="300" height="146" alt="ноутбук с открытым сайтом">
+                        </div>
+                        <p>Мир никогда не будет прежним<br>после того как увидит ваш сайт!</p>
+                        <a href="#">Заказать</a>
                     </li>
-                    <li>
-                        <span>100%</span>
-                        <p>Соблюдение<br>сроков</p>
+                    <li class="web_off web_off_2">
+                        <h3>Приложения</h3>
+                        <div class="offer_2_img">
+                            <img src="https://via.placeholder.com/150x100" width="300" height="146"
+                            alt="телефон с приложением на экране">
+                        </div>
+                        <p>Покорите топ-10 приложений<br>в AppStore и Google Play</p>
+                        <a href="#">Заказать</a>
                     </li>
-                    <li>
-                        <span>500%</span>
-                        <p>Минимальная<br>предоплата</p>
+                    <li class="web_off web_off_3">
+                        <h3>Презентации</h3>
+                        <div class="offer_3_img">
+                            <img src="https://via.placeholder.com/150x100" width="300" height="146"
+                            alt="монитор с красивой презентацией">
+                        </div>
+                        <p>Вы даже не подозреваете,<br>насколько вы изумительны!</p>
+                        <a href="#">Заказать</a>
                     </li>
                 </ul>
             </div>
         </section>
-        <section>
-            <h2>Наши партнёры</h2>
+
+        <section class="our_us">
+            <h2 style="display: none;">о нас</h2>
             <!--display = "none" - css-->
-            <ul>
-                <li>
-                    <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img
-                            src="img/logo_htmlacademy.svg" width="199" height="57" alt="ссылка на сайт htmlacademy"></a>
-                </li>
-                <li>
-                    <a href="#" target="_blank"><img src="img/logo_borodinski.png" width="209" height="90"
-                            alt="ссылка на сайт клиента,сайт borodinski"></a>
-                </li>
-                <li>
-                    <a href="#" target="_blank"><img src="img/logo_pink.png" width="185" height="52"
-                            alt="ссылка на сайт клиента,сайт pink"></a>
-                </li>
-                <li>
-                    <a href="#" target="_blank"><img src="img/logo_mishka.png" width="173" height="84"
-                            alt="ссылка на сайт клиента, сайт mishka"></a>
-                </li>
-            </ul>
+            <div class="our_us_wrap">
+                <div class="our_info">
+                    <h3>Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</h3>
+                    <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
+                        превыше креатива. Работаем не покладая рук, как роботы.</p>
+                    <span>Выполняем заказы на разработку:</span>
+                    <ul class="our_info_list">
+                        <li><span></span>Веб-сайтов любой сложности</li>
+                        <li>Мобильных приложений для iOS и Android</li>
+                        <li>Слайдшоу и видео для корпоративных презентаций</li>
+                    </ul>
+                </div>
+                <div class="our_stat">
+                    <img src="https://via.placeholder.com/150x100" width="360" height="208"
+                        alt="красочный логотип дизайн фирмы нёрдс">
+                    <p>с 2004 года Любим точность во всем:</p>
+                    <ul class="our_progress">
+                        <li>
+                            <span class="procent_stat">146<sup>&percnt;</sup></span>
+                            <p class="text-stat">Уровень<br>самоотдачи</p>
+                        </li>
+                        <li>
+                            <span class="procent_stat">100<sup>&percnt;</sup></span>
+                            <p class="text-stat">Соблюдение<br>сроков</p>
+                        </li>
+                        <li>
+                            <span class="procent_stat">500<sup>&percnt;</sup></span>
+                            <p class="text-stat">Минимальная<br>предоплата</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="our_partners">
+            <h2 style="display: none;">Наши партнёры</h2>
+            <!--display = "none" - css-->
+            <div class="partners_wrap">
+                <ul class="partners_list">
+                    <li class="partners_list_img_1">
+                        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img
+                                src="img/logo_htmlacademy_hover.svg" width="199" height="57" alt="ссылка на сайт htmlacademy"></a>
+                    </li>
+                    <li class="partners_list_img_2">
+                        <a href="#" target="_blank"><img src="img/logo_borodinski_hover.png" width="209" height="90"
+                                alt="ссылка на сайт клиента,сайт borodinski"></a>
+                    </li>
+                    <li class="partners_list_img_3">
+                        <a href="#" target="_blank"><img src="img/logo_pink_hover.png" width="185" height="52"
+                                alt="ссылка на сайт клиента,сайт pink"></a>
+                    </li>
+                    <li class="partners_list_img_4">
+                        <a href="#" target="_blank"><img src="img/logo_mishka_hover.png" width="173" height="84"
+                                alt="ссылка на сайт клиента, сайт mishka"></a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <section>
-            <h2>Где нас найти?</h2>
+        <section class="map">
+            <h2 style="display: none;">Где нас найти?</h2>
             <!--display = "none" - css-->
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4867.270615831888!2d16.921728030802896!3d52.413285486124636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cad42c1d4d%3A0x78a2c4b6155b92e7!2sCrafton%20Agencja!5e0!3m2!1sru!2spl!4v1621812986636!5m2!1sru!2spl"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <div>
+            <div class="addres_info">
                 <!--position: absolute; after iframe block-->
                 <h4>NЁRDS DESIGN STUDIO</h4>
                 <address>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
                 <a href="tel:+78005558628">+7 800 555-86-28</a>
-                <button type="button">Напишите нам</button>
+                <p class="contackt_button">
+                    <button type="button">Напишите нам</button>
+                </p>
             </div>
         </section>
     </main>
-    <footer>
-        <div>
-            <ul>
-                <li>
-                    <a href="#" target="_blank"> <img src="img/socials/vk.svg" width="81" height="81" alt="vk"></a>
-                </li>
-                <li>
-                    <a href="#" target="_blank"> <img src="img/socials/facebook.svg" width="81" height="81"
-                            alt="facebook"></a>
-                </li>
-                <li>
-                    <a href="#" target="_blank"> <img src="img/socials/instagram.svg" width="81" height="81"
-                            alt="instagram"></a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h4>Давайте дружить, это выгодно!</h4>
-            <p>Скидка 10% для друзей из социальных сетей.</p>
+    <footer class="footer">
+        <div class="footer_wrap">
+            <div class="footer_socials">
+                <ul class="footer_social_list">
+                    <li class="vk_footer">
+                        <a href="#" target="_blank"> <!--<img src="img/socials/vk.svg" width="81" height="81" alt="vk"> -->
+                            <svg class="vk_icon" width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
+                                <path class="vk_icon_path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                                <path d="M43.14 44.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.71.74-5.25 1.6-2.15 2.24-3.46 2.04-4.02-.2-.54-1.37-.4-1.37-.4l-3.91.02c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.14-2.72 2.96-.66-.44-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0039.5 33c-1.39-.03-2.57 0-3.24.32-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.52.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.93-1.4-2.93s-.1-.28-.32-.44c-.25-.18-.6-.24-.6-.24l-3.71.02s-.56.02-.77.27c-.18.21-.01.66-.01.66s2.9 6.88 6.2 10.35c3.02 3.18 6.45 2.97 6.45 2.97h1.56s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/></svg>
+                        </a>
+                    </li>
+                    <li class="facebook_footer">
+                        <a href="#" target="_blank"> <!--<img src="img/socials/facebook.svg" width="81" height="81" alt="facebook">--> 
+                            <svg class="facebook_icon" width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
+                                <path class="facebook_icon_path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                                <path d="M47 35v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V43h4v-4h-4v-4h4z" fill="#fff"/></svg>
+                        </a>
+                    </li>
+                    <li class="instagram_footer">
+                        <a href="#" target="_blank"> <!--<img src="img/socials/instagram.svg" width="81" height="81" alt="instagram">-->
+                            <svg class="instagram_icon" width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
+                                <path class="instagram_icon_path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M33 30h15a3 3 0 013 3v15a3 3 0 01-3 3H33a3 3 0 01-3-3V33a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM33 48v-9h1.18a6.5 6.5 0 1012.64 0H48v9H33zm11-11h4v-4h-4v4z" fill="#fff"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_title">
+                <h4>Давайте дружить, это выгодно!</h4>
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+            </div>
         </div>
     </footer>
 
