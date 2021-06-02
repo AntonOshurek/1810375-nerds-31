@@ -28,7 +28,9 @@
     <header class="header">
         <div class="container">
             <div class="header__active">
-                <img class="header__logo" src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс">
+                <a href="index.html">
+                    <img class="header__logo header__logo__index" src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс">
+                </a>
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__list__elem">
@@ -49,136 +51,136 @@
                     <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#A6A6A6"/></svg>
                     корзина</a>
             </div>
-            <div class="catalog_title">
-                <h1>Магазин готовых шаблонов</h1>
+            <div class="header__title__block">
+                <h1 class="header__title">Магазин готовых шаблонов</h1>
             </div>
         </div>
     </header>
 
-    <main class="main_block">
-        <section class="catalog_block">
-            <h2>Каталог шаблонов сайтов</h2>
-            <form class="form" name="form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
-                <fieldset>
-                    <legend>Стоимость:</legend>
+    <main class="main">
+        <section class="main__catalog">
+            <h2 style="display: none;">Каталог шаблонов сайтов</h2>
+            <form class="main__catalog__sort" class="form" name="form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
+                <fieldset class="sort__cost sort__form__block">
+                    <legend class="sort__legend">Стоимость:</legend>
                     <input type="range" min="1" max="100" value="50" id="the_cost">
-                    <label for="from">От</label>
+                    <label class="sort__lable" for="from">От</label>
                     <input id="from" type="text" name="from" placeholder="0" />
-                    <label for="to">До</label>
+                    <label class="sort__lable" for="to">До</label>
                     <input id="to" type="text" name="to" placeholder="100" />
                 </fieldset>
 
-                <fieldset>
-                    <legend>Сетка:</legend>
-                    <label for="grid_1">Адаптивная</label>
-                    <input type="radio" id="grid_1" name="grid" value="1" />
-                    <label for="grid_2">Фиксированная</label>
+                <fieldset class="sort__grid sort__form__block">
+                    <legend class="sort__legend">Сетка:</legend>
+                    <label class="sort__lable" for="grid_1">Адаптивная</label>
+                    <input type="radio" id="grid_1" name="grid" value="1" checked/>
+                    <label class="sort__lable" for="grid_2">Фиксированная</label>
                     <input type="radio" id="grid_2" name="grid" value="2" />
-                    <label for="grid_3">Резиновая</label>
+                    <label class="sort__lable" for="grid_3">Резиновая</label>
                     <input type="radio" id="grid_3" name="grid" value="3" />
                 </fieldset>
 
-                <fieldset>
-                    <legend>Особенности:</legend>
-                    <label for="features_1">Слайдер</label>
-                    <input type="checkbox" id="features_1" name="features" value="1" />
-                    <label for="features_2">Блок преимуществ</label>
+                <fieldset class="sort__features sort__form__block">
+                    <legend class="sort__legend">Особенности:</legend>
+                    <label class="sort__lable" for="features_1">Слайдер</label>
+                    <input type="checkbox" id="features_1" name="features" value="1" checked/>
+                    <label class="sort__lable" for="features_2">Блок преимуществ</label>
                     <input type="checkbox" id="features_2" name="features" value="2" />
-                    <label for="features_3">Новости</label>
-                    <input type="checkbox" id="features_3" name="features" value="3" />
-                    <label for="features_4">Галерея</label>
+                    <label class="sort__lable" for="features_3">Новости</label>
+                    <input type="checkbox" id="features_3" name="features" value="3" checked />
+                    <label class="sort__lable" for="features_4">Галерея</label>
                     <input type="checkbox" id="features_4" name="features" value="4" />
-                    <label for="features_5">Корзина</label>
+                    <label class="sort__lable" for="features_5">Корзина</label>
                     <input type="checkbox" id="features_5" name="features" value="5" />
                 </fieldset>
-                <button type="submit">ПОКАЗАТЬ</button>
+                <button class="main__catalog__sort__btn" type="submit">ПОКАЗАТЬ</button>
             </form>
-            <div class="main_catalog">
-                <div>
-                    <p>Сортировать:</p>
-                    <ul>
-                        <li><button type="button">По цене</button></li>
-                        <li><button type="button">По типу</button></li>
-                        <li><button type="button">По названию</button></li>
-                        <li>
-                            <button type="button"></button>
+            <div class="main__catalog__list">
+                <div class="catalog__sort">
+                    <h5 class="sort__title">Сортировать:</h5>
+                    <ul class="sort__list">
+                        <li><button class="sort__list__elem__active" type="button">По цене</button></li>
+                        <li><button class="sort__list__elem" type="button">По типу</button></li>
+                        <li><button class="sort__list__elem" type="button">По названию</button></li>
+                        <li class="sort__list__elem" >
+                            <button class="list__elem__down__btn list__elem__btn" type="button"></button>
                             <!--icon-down-dir-->
                         </li>
-                        <li>
-                            <button type="button"></button>
+                        <li class="sort__list__elem">
+                            <button class="list__elem__up__btn list__elem__btn" type="button"></button>
                             <!--icon-up-dir-->
                         </li>
                     </ul>
                 </div>
-                <ul>
-                    <li>
-                        <div>
+                <ul class="catalog__list">
+                    <li class="catalog__list__elem">
+                        <div> <!--for top img-->
                         </div>
-                        <img src="img/catalog/project_sedona.jpg" width="358" height="578" alt="дизайн проекта sedona">
-                        <div>
+                        <img class="list__elem__img" src="img/catalog/project_sedona.jpg" width="358" height="578" alt="дизайн проекта sedona">
+                        <div class="list__elem__info__block">
                             <!--hover block-->
-                            <h4>Sedona</h4>
-                            <p>Информационный сайт<br>для туристов</p>
-                            <button type="button">9 900 &#8381;</button>
+                            <a href="#" class="elem__info__block__title">Sedona</a>
+                            <p class="elem__info__block__text">Информационный сайт<br>для туристов</p>
+                            <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="catalog__list__elem">
                         <div>
                         </div>
-                        <img src="img/catalog/project_pink.jpg" width="358" height="578" alt="дизайн проекта pink">
-                        <div>
-                            <h4>Pink App</h4>
-                            <p>Продуктовый лендинг<br>приложения для iOS и Android</p>
-                            <button type="button">9 900 &#8381;</button>
+                        <img class="list__elem__img" src="img/catalog/project_pink.jpg" width="358" height="578" alt="дизайн проекта pink">
+                        <div class="list__elem__info__block">
+                            <a href="#" class="elem__info__block__title">Pink App</a>
+                            <p class="elem__info__block__text">Продуктовый лендинг<br>приложения для iOS и Android</p>
+                            <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="catalog__list__elem">
                         <div>
                         </div>
-                        <img src="img/catalog/project_borodinski.jpg" width="358" height="578"
+                        <img class="list__elem__img" src="img/catalog/project_borodinski.jpg" width="358" height="578"
                             alt="дизайн проекта borodinski">
-                        <div>
-                            <h4>Barbershop</h4>
-                            <p>Сайт салона красоты.<br>Для мужчин, да.</p>
-                            <button type="button">9 900 &#8381;</button>
+                        <div class="list__elem__info__block">
+                            <a href="#" class="elem__info__block__title">Barbershop</a>
+                            <p class="elem__info__block__text">Сайт салона красоты.<br>Для мужчин, да.</p>
+                            <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="catalog__list__elem">
                         <div>
                         </div>
-                        <img src="img/catalog/project_mishka.jpg" width="358" height="578" alt="дизайн проекта mishka">
-                        <div>
-                            <h4>MISHKA</h4>
-                            <p>Интернет-магазин<br> вязаных игрушек</p>
-                            <button type="button">9 900 &#8381;</button>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                        </div>
-                        <img src="img/catalog/project_a+.jpg" width="358" height="578" alt="дизайн проекта a+">
-                        <div>
-                            <h4>A Plus</h4>
-                            <p>Лендинг курсов повышения <br>квалификации</p>
-                            <button type="button">9 900 &#8381;</button>
+                        <img class="list__elem__img" src="img/catalog/project_mishka.jpg" width="358" height="578" alt="дизайн проекта mishka">
+                        <div class="list__elem__info__block">
+                            <a href="#" class="elem__info__block__title">MISHKA</a>
+                            <p class="elem__info__block__text">Интернет-магазин<br> вязаных игрушек</p>
+                            <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="catalog__list__elem">
                         <div>
                         </div>
-                        <img src="img/catalog/project_kwast.jpg" width="358" height="578" alt="дизайн проекта kwast">
+                        <img class="list__elem__img" src="img/catalog/project_a+.jpg" width="358" height="578" alt="дизайн проекта a+">
+                        <div class="list__elem__info__block">
+                            <a href="#" class="elem__info__block__title">A Plus</a>
+                            <p class="elem__info__block__text">Лендинг курсов повышения <br>квалификации</p>
+                            <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
+                        </div>
+                    </li>
+                    <li class="catalog__list__elem">
                         <div>
-                            <h4>КВАСТ</h4>
-                            <p>Промо-сайт производителя<br>крафтового кваса</p>
-                            <button type="button">9 900 &#8381;</button>
+                        </div>
+                        <img class="list__elem__img" src="img/catalog/project_kwast.jpg" width="358" height="578" alt="дизайн проекта kwast">
+                        <div class="list__elem__info__block">
+                            <a href="#" class="elem__info__block__title">КВАСТ</a>
+                            <p class="elem__info__block__text">Промо-сайт производителя<br>крафтового кваса</p>
+                            <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
                 </ul>
-                <ul>
-                    <li>1</li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">Следующая</a></li>
+                <ul class="catalog__pagination">
+                    <li class="pagination__page"><a class="pagination__page__link pagination__page__active" href="#" >1</a></li>
+                    <li class="pagination__page"><a class="pagination__page__link" href="#">2</a></li>
+                    <li class="pagination__page"><a class="pagination__page__link" href="#">3</a></li>
+                    <li class="pagination__page"><a class="pagination__page__link" href="#">Следующая</a></li>
                 </ul>
             </div>
         </section>
@@ -193,7 +195,7 @@
             <div class="contact__block__info">
                 <!--position: absolute; after iframe block-->
                 <h4 class="contact__block__title">NЁRDS DESIGN STUDIO</h4>
-                <address class="contact__block__addres">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
+                <address class="contact__block__address">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
                 <a class="contact__block__tel" href="tel:+78005558628">+7 800 555-86-28</a>
                 <p >
                     <button class="contact__block__btn standart__btn" type="button">Напишите нам</button>
@@ -201,32 +203,32 @@
             </div>
         </section>
         <div class="container">
-                <ul class="footer__social__list">
-                    <li class="footer__social__elem">
-                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/vk.svg" width="81" height="81" alt="vk"> -->
-                            <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
-                                <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
-                                <path class="footer__social__button__path__logo" d="M43.14 44.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.71.74-5.25 1.6-2.15 2.24-3.46 2.04-4.02-.2-.54-1.37-.4-1.37-.4l-3.91.02c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.14-2.72 2.96-.66-.44-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0039.5 33c-1.39-.03-2.57 0-3.24.32-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.52.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.93-1.4-2.93s-.1-.28-.32-.44c-.25-.18-.6-.24-.6-.24l-3.71.02s-.56.02-.77.27c-.18.21-.01.66-.01.66s2.9 6.88 6.2 10.35c3.02 3.18 6.45 2.97 6.45 2.97h1.56s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/></svg>
-                        </a>
-                    </li>
-                    <li class="footer__social__elem">
-                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/facebook.svg" width="81" height="81" alt="facebook">--> 
-                            <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
-                                <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
-                                <path class="footer__social__button__path__logo" d="M47 35v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V43h4v-4h-4v-4h4z" fill="#fff"/></svg>
-                        </a>
-                    </li>
-                    <li class="footer__social__elem">
-                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/instagram.svg" width="81" height="81" alt="instagram">-->
-                            <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
-                                <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
-                                <path class="footer__social__button__path__logo" fill-rule="evenodd" clip-rule="evenodd" d="M33 30h15a3 3 0 013 3v15a3 3 0 01-3 3H33a3 3 0 01-3-3V33a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM33 48v-9h1.18a6.5 6.5 0 1012.64 0H48v9H33zm11-11h4v-4h-4v4z" fill="#fff"/></svg>
-                        </a>
-                    </li>
-                </ul>
+            <ul class="footer__social__list">
+                <li class="footer__social__elem">
+                    <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/vk.svg" width="81" height="81" alt="vk"> -->
+                        <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
+                            <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                            <path class="footer__social__button__path__logo" d="M43.14 44.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.71.74-5.25 1.6-2.15 2.24-3.46 2.04-4.02-.2-.54-1.37-.4-1.37-.4l-3.91.02c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.14-2.72 2.96-.66-.44-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0039.5 33c-1.39-.03-2.57 0-3.24.32-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.52.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.93-1.4-2.93s-.1-.28-.32-.44c-.25-.18-.6-.24-.6-.24l-3.71.02s-.56.02-.77.27c-.18.21-.01.66-.01.66s2.9 6.88 6.2 10.35c3.02 3.18 6.45 2.97 6.45 2.97h1.56s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/></svg>
+                    </a>
+                </li>
+                <li class="footer__social__elem">
+                    <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/facebook.svg" width="81" height="81" alt="facebook">--> 
+                        <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
+                            <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                            <path class="footer__social__button__path__logo" d="M47 35v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V43h4v-4h-4v-4h4z" fill="#fff"/></svg>
+                    </a>
+                </li>
+                <li class="footer__social__elem">
+                    <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/instagram.svg" width="81" height="81" alt="instagram">-->
+                        <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
+                            <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                            <path class="footer__social__button__path__logo" fill-rule="evenodd" clip-rule="evenodd" d="M33 30h15a3 3 0 013 3v15a3 3 0 01-3 3H33a3 3 0 01-3-3V33a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM33 48v-9h1.18a6.5 6.5 0 1012.64 0H48v9H33zm11-11h4v-4h-4v4z" fill="#fff"/></svg>
+                    </a>
+                </li>
+            </ul>
             <div class="footer__text">
                 <h4 class="footer__text__title">Давайте дружить, это выгодно!</h4>
                 <p class="footer__text__desc">Скидка 10% для друзей из социальных сетей.</p>
