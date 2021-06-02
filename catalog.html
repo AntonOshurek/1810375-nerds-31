@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Style CSS-->
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,30 +26,32 @@
 
 <body>
     <header class="header">
-        <div class="top_header">
-            <a href="index.html" class="to_index" target="_blank"> <img src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс"> </a>
-            <nav class="nav">
-                <ul class="nav_list">
-                    <li>
-                        <a href="#" target="_blank">студия</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">клиенты</a>
-                    </li>
-                    <li class="active">
-                        <a href="#" target="_blank" >магазин</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <a href="#" target="_blank" class="cart">
-                <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#A6A6A6"/></svg>
-                корзина</a>
-        </div>
-        <div class="catalog_title">
-            <h1>Магазин готовых шаблонов</h1>
+        <div class="container">
+            <div class="header__active">
+                <img class="header__logo" src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс">
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__list__elem">
+                            <a class="nav__list__link header__link" href="#" target="_blank">студия</a>
+                        </li>
+                        <li class="nav__list__elem">
+                            <a class="nav__list__link header__link" href="#" target="_blank">клиенты</a>
+                        </li>
+                        <li class="nav__list__elem">
+                            <a class="nav__list__link header__link header__link__active" href="catalog.html" target="_blank">магазин</a>
+                        </li>
+                        <li class="nav__list__elem">
+                            <a class="nav__list__link header__link" href="#" target="_blank">контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" target="_blank" class="header__cart header__link">
+                    <svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#A6A6A6"/></svg>
+                    корзина</a>
+            </div>
+            <div class="catalog_title">
+                <h1>Магазин готовых шаблонов</h1>
+            </div>
         </div>
     </header>
 
@@ -180,54 +182,54 @@
                 </ul>
             </div>
         </section>
-        <section>
-            <h2>Где нас найти?</h2>
-            <!--display = "none" - css-->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4867.270615831888!2d16.921728030802896!3d52.413285486124636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cad42c1d4d%3A0x78a2c4b6155b92e7!2sCrafton%20Agencja!5e0!3m2!1sru!2spl!4v1621812986636!5m2!1sru!2spl"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <div>
-                <!--position: absolute; after iframe block-->
-                <h4>NЁRDS DESIGN STUDIO</h4>
-                <address>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
-                <a href="tel:+78005558628">+7 800 555-86-28</a>
-                <button type="button">Напишите нам</button>
-            </div>
-        </section>
     </main>
     <footer class="footer">
-        <div class="footer_wrap">
-            <div class="footer_socials">
-                <ul class="footer_social_list">
-                    <li class="vk_footer">
-                        <a href="#" target="_blank"> <!--<img src="img/socials/vk.svg" width="81" height="81" alt="vk"> -->
-                            <svg class="vk_icon" width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <section class="contact__block">
+            <h2 style="display: none;">Где нас найти?</h2>
+            <!--display = "none" - css-->
+            <iframe class="contact__block__map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4867.270615831888!2d16.921728030802896!3d52.413285486124636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cad42c1d4d%3A0x78a2c4b6155b92e7!2sCrafton%20Agencja!5e0!3m2!1sru!2spl!4v1621812986636!5m2!1sru!2spl"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="contact__block__info">
+                <!--position: absolute; after iframe block-->
+                <h4 class="contact__block__title">NЁRDS DESIGN STUDIO</h4>
+                <address class="contact__block__addres">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
+                <a class="contact__block__tel" href="tel:+78005558628">+7 800 555-86-28</a>
+                <p >
+                    <button class="contact__block__btn standart__btn" type="button">Напишите нам</button>
+                </p>
+            </div>
+        </section>
+        <div class="container">
+                <ul class="footer__social__list">
+                    <li class="footer__social__elem">
+                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/vk.svg" width="81" height="81" alt="vk"> -->
+                            <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
-                                <path class="vk_icon_path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
-                                <path d="M43.14 44.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.71.74-5.25 1.6-2.15 2.24-3.46 2.04-4.02-.2-.54-1.37-.4-1.37-.4l-3.91.02c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.14-2.72 2.96-.66-.44-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0039.5 33c-1.39-.03-2.57 0-3.24.32-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.52.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.93-1.4-2.93s-.1-.28-.32-.44c-.25-.18-.6-.24-.6-.24l-3.71.02s-.56.02-.77.27c-.18.21-.01.66-.01.66s2.9 6.88 6.2 10.35c3.02 3.18 6.45 2.97 6.45 2.97h1.56s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/></svg>
+                                <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                                <path class="footer__social__button__path__logo" d="M43.14 44.51c.95-.3 2.18 2.04 3.48 2.94.98.68 1.73.53 1.73.53l3.47-.05s1.82-.1.96-1.55c-.07-.12-.5-1.07-2.59-3.02-2.17-2.05-1.88-1.71.74-5.25 1.6-2.15 2.24-3.46 2.04-4.02-.2-.54-1.37-.4-1.37-.4l-3.91.02c-.38 0-.7.12-.85.52 0 0-.62 1.66-1.45 3.08-1.74 2.99-2.43 3.14-2.72 2.96-.66-.44-.5-1.74-.5-2.67 0-2.9.44-4.1-.84-4.41A6.6 6.6 0 0039.5 33c-1.39-.03-2.57 0-3.24.32-.45.23-.79.72-.58.74.26.04.84.16 1.15.59.4.55.4 1.79.4 1.79s.22 3.41-.55 3.83c-.52.3-1.25-.3-2.8-3.01-.8-1.4-1.4-2.93-1.4-2.93s-.1-.28-.32-.44c-.25-.18-.6-.24-.6-.24l-3.71.02s-.56.02-.77.27c-.18.21-.01.66-.01.66s2.9 6.88 6.2 10.35c3.02 3.18 6.45 2.97 6.45 2.97h1.56s.47-.05.7-.31c.23-.24.22-.7.22-.7s-.03-2.1.94-2.41z" fill="#fff"/></svg>
                         </a>
                     </li>
-                    <li class="facebook_footer">
-                        <a href="#" target="_blank"> <!--<img src="img/socials/facebook.svg" width="81" height="81" alt="facebook">--> 
-                            <svg class="facebook_icon" width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li class="footer__social__elem">
+                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/facebook.svg" width="81" height="81" alt="facebook">--> 
+                            <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
-                                <path class="facebook_icon_path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
-                                <path d="M47 35v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V43h4v-4h-4v-4h4z" fill="#fff"/></svg>
+                                <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                                <path class="footer__social__button__path__logo" d="M47 35v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V43h4v-4h-4v-4h4z" fill="#fff"/></svg>
                         </a>
                     </li>
-                    <li class="instagram_footer">
-                        <a href="#" target="_blank"> <!--<img src="img/socials/instagram.svg" width="81" height="81" alt="instagram">-->
-                            <svg class="instagram_icon" width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li class="footer__social__elem">
+                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/instagram.svg" width="81" height="81" alt="instagram">-->
+                            <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
-                                <path class="instagram_icon_path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M33 30h15a3 3 0 013 3v15a3 3 0 01-3 3H33a3 3 0 01-3-3V33a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM33 48v-9h1.18a6.5 6.5 0 1012.64 0H48v9H33zm11-11h4v-4h-4v4z" fill="#fff"/></svg>
+                                <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
+                                <path class="footer__social__button__path__logo" fill-rule="evenodd" clip-rule="evenodd" d="M33 30h15a3 3 0 013 3v15a3 3 0 01-3 3H33a3 3 0 01-3-3V33a3 3 0 013-3zm11 10.5a3.5 3.5 0 10-7 0 3.5 3.5 0 007 0zM33 48v-9h1.18a6.5 6.5 0 1012.64 0H48v9H33zm11-11h4v-4h-4v4z" fill="#fff"/></svg>
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div class="footer_title">
-                <h4>Давайте дружить, это выгодно!</h4>
-                <p>Скидка 10% для друзей из социальных сетей.</p>
+            <div class="footer__text">
+                <h4 class="footer__text__title">Давайте дружить, это выгодно!</h4>
+                <p class="footer__text__desc">Скидка 10% для друзей из социальных сетей.</p>
             </div>
         </div>
     </footer>

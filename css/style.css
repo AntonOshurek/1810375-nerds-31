@@ -3,7 +3,7 @@ body {
     line-height: 24px;  
     font-weight: 400;
     font-style: normal;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
 }
       
 :root {
@@ -17,7 +17,7 @@ body {
     --active-red: #E74246;
     --dark-red: #D7373B;
 
-    --grenn-standart: #00CA74;
+    --green-standart: #00CA74;
     --orange-standart: #EFC849;
     --green-lazy: #00BC6C;
     --green-active: #00AA62;
@@ -69,9 +69,10 @@ body {
 }
 
 /*for active link*/
-/*.header__link__active {  
+.header__link__active {  
     border-bottom: 2px solid var(--lazy-reed);
-}*/
+    pointer-events: none;
+}
 
 .header__link:active {
     color: var(--standart-black);
@@ -112,7 +113,7 @@ body {
 }
 
 .web__off__app__btn {
-    background-color: var(--grenn-standart);
+    background-color: var(--green-standart);
 }
 
 .web__off__app__btn:hover {
@@ -134,29 +135,27 @@ body {
 .web__off__pres__btn:active {
     background-color: var(--orange-active);
 }
-                /*main=>our us info block*/
+                /*main=>about us info block*/
 /*info*/
-.our__us__info__title {
+.about__us__info__title {
     font-weight: 500;
     font-size: 45px;
     line-height: 45px;
     color: var(--standart-black);
-    font-size: 16px;
-line-height: 24px;
 }
 
-.our__us__info__text {
+.about__us__info__text {
     color: var(--lazy-black);
 }
 
-.our__us__info__list__title {
+.about__us__info__list__title {
     font-weight: bold;
     color: var(--lazy-black);
     font-size: 16px;
     line-height: 24px;
 }
 
-.our__us__info__list {
+.about__us__info__list {
     list-style-type: none;
     color: var(--lazy-black);
 }
@@ -166,25 +165,25 @@ line-height: 24px;
     display: inline-block;
     width: 25px;
     height: 2px;    
-    background: #FB565A;
+    background: var(--lazy-reed);
     margin-right: 5px;
     margin-bottom: 4px;
 }
 /*stats*/
-.our__us__stat__img {
+.about__us__stat__img {
     background-color: var(--lazy-grey);
     width: 360px;
     height: 208px;
 }
 
-.our__us__stat__list__title {
+.about__us__stat__list__title {
     font-weight: bold;
     color: var(--standart-black);
     font-size: 16px;
     line-height: 24px;
 }
 
-.our__us__stat__list {
+.about__us__stat__list {
     list-style: none;
 }
 
@@ -244,11 +243,11 @@ line-height: 24px;
 }
 
 .footer__social__button:hover .footer__social__button__path {
-    fill: #E74246;
+    fill: var(--active-red);
 }
 
 .footer__social__button:active .footer__social__button__path {
-    fill: #D7373B;
+    fill: var(--dark-red);
 }
 
 .footer__social__button:active .footer__social__button__path__logo {
