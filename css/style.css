@@ -332,14 +332,14 @@ body {
     border: none;
 }
 
-.list__elem__down__btn::after {
+.list__elem__btn::after {
     content: ''; 
     cursor: pointer;
     position: absolute;  
     top: 0px;
     left: 0px;
-    border: 10px solid transparent;
-    border-top: 10px solid var(--black-opacity);
+    border: 7px solid transparent;
+    border-top: 8px solid var(--black-opacity);
 }
 
 .list__elem__up__btn::after {
@@ -348,8 +348,8 @@ body {
     position: absolute;  
     top: 0px;
     left: 0px;
-    border: 10px solid transparent; 
-    border-bottom: 10px solid var(--black-opacity);
+    border: 7px solid transparent; 
+    border-bottom: 8px solid var(--black-opacity);
 }
 
 /*catalog list block*/
@@ -400,8 +400,15 @@ body {
     border: none;
 }
 
+.sort__form__block input[type="radio"]:disabled,
+.sort__form__block input[type="text"]:disabled,
+.sort__form__block input[type="checkbox"]:disabled {
+    opacity: 0.3;
+}
+
 .sort__legend {
     font-weight: bold;
+    text-transform: uppercase;
     font-size: 18px;
     line-height: 30px;
     color: var(--standart-black);

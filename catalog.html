@@ -60,41 +60,43 @@
     <main class="main">
         <section class="main__catalog">
             <h2 style="display: none;">Каталог шаблонов сайтов</h2>
-            <form class="main__catalog__sort" class="form" name="form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
-                <fieldset class="sort__cost sort__form__block">
-                    <legend class="sort__legend">Стоимость:</legend>
-                    <input type="range" min="1" max="100" value="50" id="the_cost">
-                    <label class="sort__lable" for="from">От</label>
-                    <input id="from" type="text" name="from" placeholder="0" />
-                    <label class="sort__lable" for="to">До</label>
-                    <input id="to" type="text" name="to" placeholder="100" />
-                </fieldset>
-
-                <fieldset class="sort__grid sort__form__block">
-                    <legend class="sort__legend">Сетка:</legend>
-                    <label class="sort__lable" for="grid_1">Адаптивная</label>
-                    <input type="radio" id="grid_1" name="grid" value="1" checked/>
-                    <label class="sort__lable" for="grid_2">Фиксированная</label>
-                    <input type="radio" id="grid_2" name="grid" value="2" />
-                    <label class="sort__lable" for="grid_3">Резиновая</label>
-                    <input type="radio" id="grid_3" name="grid" value="3" />
-                </fieldset>
-
-                <fieldset class="sort__features sort__form__block">
-                    <legend class="sort__legend">Особенности:</legend>
-                    <label class="sort__lable" for="features_1">Слайдер</label>
-                    <input type="checkbox" id="features_1" name="features" value="1" checked/>
-                    <label class="sort__lable" for="features_2">Блок преимуществ</label>
-                    <input type="checkbox" id="features_2" name="features" value="2" />
-                    <label class="sort__lable" for="features_3">Новости</label>
-                    <input type="checkbox" id="features_3" name="features" value="3" checked />
-                    <label class="sort__lable" for="features_4">Галерея</label>
-                    <input type="checkbox" id="features_4" name="features" value="4" />
-                    <label class="sort__lable" for="features_5">Корзина</label>
-                    <input type="checkbox" id="features_5" name="features" value="5" />
-                </fieldset>
-                <button class="main__catalog__sort__btn" type="submit">ПОКАЗАТЬ</button>
-            </form>
+            <aside>
+                <form class="main__catalog__sort form" name="form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
+                    <fieldset class="sort__cost sort__form__block">
+                        <legend class="sort__legend">Стоимость:</legend>
+                        <input type="range" min="1" max="100" value="50" id="the_cost">
+                        <label class="sort__lable" for="from">От</label>
+                        <input id="from" type="text" name="from" placeholder="0" />
+                        <label class="sort__lable" for="to">До</label>
+                        <input id="to" type="text" name="to" placeholder="100" />
+                    </fieldset>
+    
+                    <fieldset class="sort__grid sort__form__block">
+                        <legend class="sort__legend">Сетка:</legend>
+                        <label class="sort__lable" for="grid_1">Адаптивная</label>
+                        <input type="radio" id="grid_1" name="grid" value="1" checked/>
+                        <label class="sort__lable" for="grid_2">Фиксированная</label>
+                        <input type="radio" id="grid_2" name="grid" value="2" disabled />
+                        <label class="sort__lable" for="grid_3">Резиновая</label>
+                        <input type="radio" id="grid_3" name="grid" value="3" />
+                    </fieldset>
+    
+                    <fieldset class="sort__features sort__form__block">
+                        <legend class="sort__legend">Особенности:</legend>
+                        <label class="sort__lable" for="features_1">Слайдер</label>
+                        <input type="checkbox" id="features_1" name="features" value="1" checked/>
+                        <label class="sort__lable" for="features_2">Блок преимуществ</label>
+                        <input type="checkbox" id="features_2" name="features" value="2" />
+                        <label class="sort__lable" for="features_3">Новости</label>
+                        <input type="checkbox" id="features_3" name="features" value="3" checked />
+                        <label class="sort__lable" for="features_4">Галерея</label>
+                        <input type="checkbox" id="features_4" name="features" value="4" />
+                        <label class="sort__lable" for="features_5">Корзина</label>
+                        <input type="checkbox" id="features_5" name="features" value="5" />
+                    </fieldset>
+                    <button class="main__catalog__sort__btn" type="submit">ПОКАЗАТЬ</button>
+                </form>
+            </aside>
             <div class="main__catalog__list">
                 <div class="catalog__sort">
                     <h5 class="sort__title">Сортировать:</h5>
