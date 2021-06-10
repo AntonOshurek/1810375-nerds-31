@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 
 <head>
     <meta charset="UTF-8">
@@ -24,11 +24,11 @@
     <title>Магазин готовых шаблонов</title>
 </head>
 
-<body>
+<body class="body">
     <header class="header">
         <div class="container">
             <div class="header__active">
-                <a href="index.html">
+                <a href="index.html" aria-label="На главную страницу">
                     <img class="header__logo header__logo__index" src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс">
                 </a>
                 <nav class="nav">
@@ -49,7 +49,8 @@
                 </nav>
                 <a href="#" target="_blank" class="header__cart header__link">
                     <svg class="header__cart__logo" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#A6A6A6"/></svg>
-                    корзина</a>
+                    корзина
+                </a>
             </div>
             <div class="header__title__block">
                 <h1 class="header__title">Магазин готовых шаблонов</h1>
@@ -122,14 +123,19 @@
                         <li class="sort__list__list__elem"><button class="sort__list__elem__active" type="button">По цене</button></li>
                         <li class="sort__list__list__elem"><button class="sort__list__elem" type="button">По типу</button></li>
                         <li class="sort__list__list__elem"><button class="sort__list__elem" type="button">По названию</button></li>
-                        <li class="sort__list__list__elem"><button class="sort__list__elem list__elem__down__btn list__elem__btn" type="button"></button></li>
-                        <li class="sort__list__list__elem"><button class="sort__list__elem list__elem__up__btn list__elem__btn" type="button"></button></li>
+                        <li class="sort__list__list__elem">
+                            <button class="sort__list__elem list__elem__down__btn list__elem__btn" type="button" aria-label="сортировка от большего значения"></button>
+                        </li>
+                        <li class="sort__list__list__elem">
+                            <button class="sort__list__elem list__elem__up__btn list__elem__btn" type="button" aria-label="сортировка от меньшего значения"></button>
+                        </li>
                     </ul>
                 </div>
                 <ul class="catalog__list">
                     <li class="catalog__list__elem">
-                        <div> <!--for top img-->
-                        </div>
+                            <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
+                            </svg>
                         <img class="list__elem__img" src="img/catalog/project_sedona.jpg" width="358" height="578" alt="дизайн проекта sedona">
                         <div class="list__elem__info__block">
                             <!--hover block-->
@@ -139,8 +145,9 @@
                         </div>
                     </li>
                     <li class="catalog__list__elem">
-                        <div>
-                        </div>
+                        <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
+                        </svg>
                         <img class="list__elem__img" src="img/catalog/project_pink.jpg" width="358" height="578" alt="дизайн проекта pink">
                         <div class="list__elem__info__block">
                             <a href="#" class="elem__info__block__title">Pink App</a>
@@ -149,8 +156,9 @@
                         </div>
                     </li>
                     <li class="catalog__list__elem">
-                        <div>
-                        </div>
+                        <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
+                        </svg>
                         <img class="list__elem__img" src="img/catalog/project_borodinski.jpg" width="358" height="578"
                             alt="дизайн проекта borodinski">
                         <div class="list__elem__info__block">
@@ -160,8 +168,9 @@
                         </div>
                     </li>
                     <li class="catalog__list__elem">
-                        <div>
-                        </div>
+                        <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
+                        </svg>
                         <img class="list__elem__img" src="img/catalog/project_mishka.jpg" width="358" height="578" alt="дизайн проекта mishka">
                         <div class="list__elem__info__block">
                             <a href="#" class="elem__info__block__title">MISHKA</a>
@@ -170,8 +179,9 @@
                         </div>
                     </li>
                     <li class="catalog__list__elem">
-                        <div>
-                        </div>
+                        <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
+                        </svg>
                         <img class="list__elem__img" src="img/catalog/project_a+.jpg" width="358" height="578" alt="дизайн проекта a+">
                         <div class="list__elem__info__block">
                             <a href="#" class="elem__info__block__title">A Plus</a>
@@ -180,8 +190,9 @@
                         </div>
                     </li>
                     <li class="catalog__list__elem">
-                        <div>
-                        </div>
+                        <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
+                        </svg>
                         <img class="list__elem__img" src="img/catalog/project_kwast.jpg" width="358" height="578" alt="дизайн проекта kwast">
                         <div class="list__elem__info__block">
                             <a href="#" class="elem__info__block__title">КВАСТ</a>
@@ -199,21 +210,22 @@
             </section>
         </div>
     </main>
-    <footer class="footer">
+    <footer class="footer catalog__footer">
         <section class="contact__block">
             <h2 style="display: none;">Где нас найти?</h2>
             <!--display = "none" - css-->
             <iframe class="contact__block__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4867.270615831888!2d16.921728030802896!3d52.413285486124636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cad42c1d4d%3A0x78a2c4b6155b92e7!2sCrafton%20Agencja!5e0!3m2!1sru!2spl!4v1621812986636!5m2!1sru!2spl"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <div class="contact__block__info">
-                <!--position: absolute; after iframe block-->
-                <h4 class="contact__block__title">NЁRDS DESIGN STUDIO</h4>
-                <address class="contact__block__address">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
-                <a class="contact__block__tel" href="tel:+78005558628">+7 800 555-86-28</a>
-                <p >
-                    <button class="contact__block__btn standart__btn" type="button">Напишите нам</button>
-                </p>
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+            <div class="container footer__container__map">
+                <div class="contact__block__info">
+                    <!--position: absolute; after iframe block-->
+                    <h4 class="contact__block__title">NЁRDS DESIGN STUDIO</h4>
+                    <address class="contact__block__address">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
+                    <a class="contact__block__tel" href="tel:+78005558628">+7 800 555-86-28</a>
+                    <p class="contack__block__button"><button class="contact__block__btn standart__btn" type="button">Напишите нам</button></p>
+                </div>
             </div>
         </section>
         <div class="container">
