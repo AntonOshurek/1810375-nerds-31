@@ -164,7 +164,7 @@
     text-transform: uppercase;
 }
 
-.header__link:hover {
+.header__link:hover{
     color: var(--lazy-reed);
 }
 
@@ -744,6 +744,11 @@
     margin-bottom: 12px;
 }
 
+.elem__info__block__title__text {
+    margin: 0;
+    padding: 0;
+}
+
 .elem__info__block__title:hover {
     color: var(--lazy-reed);
 }
@@ -758,6 +763,8 @@
     line-height: 18px;
     color: var(--lazy-grey);
     margin: 0 0 32px 0;
+    padding: 0;
+    font-weight: normal;
 }
 
 .elem__info__block__btn {
