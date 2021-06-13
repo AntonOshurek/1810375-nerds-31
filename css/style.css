@@ -39,6 +39,14 @@
     --orange-active: #E5A722;
 }
 
+.visually__hiden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
 /*grid page style*/
 
 .header__active {
@@ -928,4 +936,143 @@
     border: 3px solid var(--grey-db);
     padding: 14px 17px 12px 17px;
     pointer-events: none;
+}
+
+
+
+
+
+/*modal*/
+
+.modal__content {
+    position: relative;
+    display: inline-block;
+    padding: 60px 100px 80px 100px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+    background-color: var(--standart-white);
+}
+
+.modal__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.close__modal {
+    position: absolute;
+    top: 78px;
+    right: 90px;
+}
+
+.close__modal__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    opacity: 0.4;
+}
+
+.close__modal__btn:hover {
+    transform: rotate(360deg);
+    transition: 0.4s;
+    opacity: 1;
+}
+
+.close__modal__btn:active:focus {
+    opacity: 0.1;
+}
+
+.modal__form fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modal__form__legend {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 53px;
+    margin-bottom: 37px;
+}
+
+.modal__form__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__name__email {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__form__name {
+    margin-right: 40px;
+}
+
+.modal__label {
+    display: inline-block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 9px;
+}
+
+.modal__input {
+    width: 360px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #D7DCDE;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.modal__input:hover {
+    border: 2px solid #B4B9BB;
+}
+
+.modal__input:active {
+    border: 2px solid #000000;
+}
+
+.modal__form__text {
+    margin-bottom: 35px;
+}
+
+.modal__input__textarea {
+    width: 760px;
+    height: 118px;
+    background: #FFFFFF;
+    border: 2px solid #D7DCDE;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.modal__btn__block {
+    align-self: flex-start;
+}
+
+.modal__btn__submit {
+    padding: 17px 83px 15px 83px;
+}
+
+.modal__block {
+    display: block;
+}
+
+.modal__none {
+    display: none;
 }

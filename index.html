@@ -104,7 +104,7 @@
     <main class="main">
         <div class="container">
             <section class="web__offers">
-                <h2 style="display: none;">Веб-сайты, Приложения, Презентации</h2>
+                <h2 class="visually__hiden">Веб-сайты, Приложения, Презентации</h2>
                 <ul class="web__offers__list">
                     <li class="web__offer web__off__site">
                         <h3 class="web__offer__title">Веб-сайты</h3>
@@ -128,7 +128,7 @@
             </section>
 
             <section class="about__us">
-                <h2 style="display: none;">информация о нас</h2>
+                <h2 class="visually__hiden">информация о нас</h2>
                     <div class="about__us__info">
                         <p class="about__us__info__title">Мы — маленькая, но гордая<br>дизайн-студия из Краснодара.</p>
                         <p class="about__us__info__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br>
@@ -161,23 +161,23 @@
                     </div>
             </section>
             <section class="our__partners">
-                <h2 style="display: none;">Наши партнёры</h2>
+                <h2 class="visually__hiden">Наши партнёры</h2>
                     <ul class="our__partners__list">
                         <li class="our__partners__partner">
-                            <a class="our__partners__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img
-                                src="img/logo_htmlacademy_hover.svg" width="199" height="57" alt="ссылка на сайт партнёра htmlacademy"></a>
+                            <a class="our__partners__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="ссылка на сайт партнёра htmlacademy"><img
+                                src="img/logo_htmlacademy_hover.svg" width="199" height="57" alt="логотип сайта партнёра htmlacademy"></a>
                         </li>
                         <li class="our__partners__partner">
-                            <a class="our__partners__link" href="#" target="_blank"><img src="img/logo_borodinski_hover.png" width="209" height="90"
-                                alt="ссылка на сайт партнёра,сайт borodinski"></a>
+                            <a class="our__partners__link" href="#" target="_blank" aria-label="ссылка на сайт партнёра,сайт borodinski"><img src="img/logo_borodinski_hover.png" width="209" height="90"
+                                alt="логотип сайта партнёра, сайт borodinski"></a>
                         </li>
                         <li class="our__partners__partner">
-                            <a class="our__partners__link" href="#" target="_blank"><img src="img/logo_pink_hover.png" width="185" height="52"
-                                 alt="ссылка на сайт партнёра,сайт pink"></a>
+                            <a class="our__partners__link" href="#" target="_blank" aria-label="ссылка на сайт партнёра,сайт pink"><img src="img/logo_pink_hover.png" width="185" height="52"
+                                 alt="логотип сайта партнёра, сайт pink"></a>
                         </li>
                         <li class="our__partners__partner">
-                            <a class="our__partners__link" href="#" target="_blank"><img src="img/logo_mishka_hover.png" width="173" height="84"
-                                alt="ссылка на сайт партнёра, сайт mishka"></a>
+                            <a class="our__partners__link" href="#" target="_blank" aria-label="ссылка на сайт партнёра, сайт mishka"><img src="img/logo_mishka_hover.png" width="173" height="84"
+                                alt="логотип сайта партнёра, сайт mishka"></a>
                         </li>
                     </ul>
             </section>
@@ -186,19 +186,17 @@
 
     <footer class="footer">
         <section class="contact__block">
-            <h2 style="display: none;">Где нас найти?</h2>
-            <!--display = "none" - css-->
+            <h2 class="visually__hiden">Где нас найти?</h2>
             <iframe class="contact__block__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4867.270615831888!2d16.921728030802896!3d52.413285486124636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cad42c1d4d%3A0x78a2c4b6155b92e7!2sCrafton%20Agencja!5e0!3m2!1sru!2spl!4v1621812986636!5m2!1sru!2spl"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
             <div class="container footer__container__map">
                 <div class="contact__block__info">
-                    <!--position: absolute; after iframe block-->
                     <h3 class="contact__block__title">NЁRDS DESIGN STUDIO</h3>
                     <address class="contact__block__address">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
                     <a class="contact__block__tel" href="tel:+78005558628">+7 800 555-86-28</a>
-                    <p class="contack__block__button"><button class="contact__block__btn standart__btn" type="button">Напишите нам</button></p>
+                    <p id="modal__open" class="contack__block__button"><button class="contact__block__btn standart__btn" type="button">Напишите нам</button></p>
                 </div>
             </div>
         </section>
@@ -206,7 +204,7 @@
             <div class="footer__contacts">
                 <ul class="footer__social__list">
                     <li class="footer__social__elem">
-                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/vk.svg" width="81" height="81" alt="vk"> -->
+                        <a class="footer__social__button" href="#" target="_blank" aria-label="ссылка на страницу студии в вконтакте"> <!--<img src="img/socials/vk.svg" width="81" height="81" alt="vk"> -->
                             <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
                                 <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
@@ -214,7 +212,7 @@
                         </a>
                     </li>
                     <li class="footer__social__elem">
-                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/facebook.svg" width="81" height="81" alt="facebook">--> 
+                        <a class="footer__social__button" href="#" target="_blank" aria-label="ссылка на страницу студии в facebook"> <!--<img src="img/socials/facebook.svg" width="81" height="81" alt="facebook">--> 
                             <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
                                 <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
@@ -222,7 +220,7 @@
                         </a>
                     </li>
                     <li class="footer__social__elem">
-                        <a class="footer__social__button" href="#" target="_blank"> <!--<img src="img/socials/instagram.svg" width="81" height="81" alt="instagram">-->
+                        <a class="footer__social__button" href="#" target="_blank" aria-label="ссылка на страницу студии в instagram"> <!--<img src="img/socials/instagram.svg" width="81" height="81" alt="instagram">-->
                             <svg width="81" height="81" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#fff"/>
                                 <path class="footer__social__button__path" fill-rule="evenodd" clip-rule="evenodd" d="M40.66 1.21a39.12 39.12 0 110 78.25 39.12 39.12 0 010-78.25z" fill="#E1E1E1"/>
@@ -238,6 +236,52 @@
         </div>
     </footer>
 
+    <div id="modal" class="modal__none">
+        <div class="container modal__body ">
+            <div class="modal__content" >
+                <div class="close__modal">
+                    <button id="modal__close" class="close__modal__btn" type="button" aria-label="закрыть модальное окно">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z" fill="#FB565A"/>
+                        </svg>
+                    </button>
+                </div>
+                <form class="modal__form" action="https://echo.htmlacademy.ru/" name="contack__form" method="POST">
+                    <fieldset>
+                        <legend class="modal__form__legend">Напишите нам</legend>
+                        <div class="modal__form__block">
+                            <div class="form__name__email">
+                                <div class="modal__form__name">
+                                    <label class="modal__label modal__label__name" for="modal__text">Ваше имя:></label>
+                                    <div>
+                                        <input class="modal__input modal__input__name" type="text" id="modal__text" placeholder="Имя Фамилия">
+                                    </div>
+                                </div>
+                                <div class="modal__form__email">
+                                    <label class="modal__label modal__label__email" for="modal__email">Ваш email:</label>
+                                    <div>
+                                        <input class="modal__input modal__input__email" type="email" id="modal__email" placeholder="email@example.com ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__form__text">
+                                <label class="modal__label modal__label__textarea" for="text_mail">Текст письма:</label>
+                                <div>
+                                    <textarea class="modal__input__textarea modal__input" name="text_mail" id="text_mail" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal__btn__block">
+                                <button class="modal__btn__submit standart__btn" type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    
     <script src="js/script.js"></script>
 </body>
 
