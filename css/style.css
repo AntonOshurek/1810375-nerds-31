@@ -256,15 +256,30 @@
     position: absolute;
     bottom: 96px;
     left: 536px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .carousel__button__radio  {
     margin-right: 17px;
     width: 18px;
     height: 18px;
-    outline: none;
     border: none;
+    border-radius: 50%;
     background-color: var(--standart-white);
+    position: relative;
+}
+
+.button__radio__active::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #C1C1C1;
+    left: 4px;
+    top: 4px;
 }
 
                     /*main block*/
@@ -446,6 +461,12 @@
 
 .our__partners__list {
     list-style: none;
+}
+
+.partner__border {
+    height: 52px;
+    width: 2px;
+    background-color: var(--lazy-white);
 }
 
 .our__partners__partner {

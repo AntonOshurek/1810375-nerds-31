@@ -10,6 +10,10 @@ let tab = function() {
     });
 
     function selectTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('button__radio__active');
+        });
+        this.classList.add('button__radio__active');
         tabName = this.getAttribute('data-tab-name');
         selectTabContent(tabName);
         console.log(tabName);
