@@ -18,15 +18,19 @@
       
 :root {
     --standart-black: #000;
+    --black-opacity8: rgb(0, 0, 0, 0.8);
+    --black-opacity4: rgb(0, 0, 0, 0.4);
     --lazy-black: #283136;
     --black-opacity:#231F20;
     --goshawk-grey: #444444;
     --lazy-grey: #666;
     --standart-white: #fff;
+    --white-d7: #D7DCDE;
     --lazy-white: #EEEEEE;
     --grey-db: #DBDBDB;
     --grey-df: #DFDFDF;
     --grey-d5: #D5D5D5;;
+    --grey-b4: #B4B9BB;
     --lazy-reed: #FB565A;
     --active-red: #E74246;
     --dark-red: #D7373B;
@@ -389,6 +393,7 @@
 }
 /*stats*/
 .about__us__stat__img {
+    display: flex;
     background-color: var(--lazy-grey);
     width: 360px;
     height: 208px;
@@ -944,14 +949,6 @@
 
 /*modal*/
 
-.modal__content {
-    position: relative;
-    display: inline-block;
-    padding: 60px 100px 80px 100px;
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
-    background-color: var(--standart-white);
-}
-
 .modal__body {
     display: flex;
     justify-content: center;
@@ -960,9 +957,29 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.8);
     top: 0;
     left: 0;
+    background-color: var(--black-opacity8);
+}
+
+.modal__content {
+    position: relative;
+    z-index: 1;
+    max-width: min-content;
+    max-height: min-content;
+    padding: 60px 100px 80px 100px;
+    box-shadow: 0px 20px 40px var(--black-opacity4);
+    background-color: var(--standart-white);
+}
+
+.modal__bg {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 }
 
 .close__modal {
@@ -1034,18 +1051,18 @@
 .modal__input {
     width: 360px;
     height: 50px;
-    background: #FFFFFF;
-    border: 2px solid #D7DCDE;
+    background: var(--standart-white);
+    border: 2px solid var(--white-d7);
     box-sizing: border-box;
     border-radius: 3px;
 }
 
 .modal__input:hover {
-    border: 2px solid #B4B9BB;
+    border: 2px solid var(--grey-b4);
 }
 
 .modal__input:active {
-    border: 2px solid #000000;
+    border: 2px solid var(--standart-black);
 }
 
 .modal__form__text {
@@ -1056,7 +1073,7 @@
     width: 760px;
     height: 118px;
     background: #FFFFFF;
-    border: 2px solid #D7DCDE;
+    border: 2px solid var(--white-d7);
     box-sizing: border-box;
     border-radius: 3px;
 }
@@ -1067,6 +1084,7 @@
 
 .modal__btn__submit {
     padding: 17px 83px 15px 83px;
+    text-transform: uppercase;
 }
 
 .modal__block {

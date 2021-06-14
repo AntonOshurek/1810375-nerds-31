@@ -24,9 +24,12 @@ let tab = function() {
 
 tab();
 
-const popup = document.getElementById('modal');  /*popup block*/
-const popupClose = document.getElementById('modal__close'); /*popup close btn*/
-const popupOpen = document.getElementById('modal__open'); /*popup open button*/
+let popup = document.getElementById('modal');  /*popup block*/
+let popupClose = document.getElementById('modal__close'); /*popup close btn*/
+let popupOpen = document.getElementById('modal__open'); /*popup open button*/
+let modalBg = document.getElementById('modal__bg');
+
+console.log(modalBg);
 
 popupOpen.addEventListener ('click', function() {
     popup.removeAttribute('class');
@@ -34,6 +37,11 @@ popupOpen.addEventListener ('click', function() {
 })
 
 popupClose.addEventListener('click', function() {
+    popup.removeAttribute('class');
+    popup.setAttribute('class', 'modal__none')
+})
+
+modalBg.addEventListener('click', function() {
     popup.removeAttribute('class');
     popup.setAttribute('class', 'modal__none')
 })
