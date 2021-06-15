@@ -154,20 +154,23 @@
 .nav__list {
     padding: 0px;
     margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
 }
 
 .nav__list .nav__list__elem {
     list-style: none;
     color: var(--standart-black);
-    display: inline-block;
+}
+
+.nav__list .nav__list__elem:not(:last-child) {
     margin-right: 45px;
 }
 
-.nav__list .nav__list__elem:last-child {
-    margin-right: 0;
-}
-
 .header__link {
+    padding: 10px 0;
     color: var(--standart-black);
     text-decoration: none;
     font-weight: 500;
@@ -531,6 +534,10 @@
     color: var(--lazy-grey);
 }
 
+.contact__block__tel:hover {
+    color: var(--lazy-reed);
+}
+
 .contack__block__button {  /*<p> for button*/
     margin: 0;
     padding: 0;
@@ -551,12 +558,17 @@
 .footer__social__list {
     margin: 0px 0px;
     padding: 0px 0px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .footer__social__elem {
     list-style: none;
-    display: inline-block;
     cursor: pointer;
+}
+
+.footer__social__elem:not(:last-child) {
     margin-right: 9px;
 }
 
@@ -1028,7 +1040,7 @@
     opacity: 0.1;
 }
 
-.modal__form fieldset{
+.modal__form .modal__form__fieldset{
     border: none;
     margin: 0;
     padding: 0;
@@ -1108,10 +1120,10 @@
     text-transform: uppercase;
 }
 
-.modal__block {
-    display: block;
+.modal {
+    display: none;
 }
 
-.modal__none {
-    display: none;
+.modal__show {
+    display: block;
 }

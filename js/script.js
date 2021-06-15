@@ -16,7 +16,6 @@ let tab = function() {
         this.classList.add('button__radio__active');
         tabName = this.getAttribute('data-tab-name');
         selectTabContent(tabName);
-        console.log(tabName);
     }
 
     function selectTabContent(tabName) {
@@ -28,24 +27,19 @@ let tab = function() {
 
 tab();
 
-let popup = document.getElementById('modal');  /*popup block*/
-let popupClose = document.getElementById('modal__close'); /*popup close btn*/
-let popupOpen = document.getElementById('modal__open'); /*popup open button*/
-let modalBg = document.getElementById('modal__bg');
+const popup = document.getElementById('modal');  /*popup block*/
+const popupClose = document.getElementById('modal__close'); /*popup close btn*/
+const popupOpen = document.getElementById('modal__open'); /*popup open button*/
+const modalBg = document.getElementById('modal__bg');
 
-console.log(modalBg);
+const closeModal = () => {
+    popup.classList.remove('modal__show');
+}
 
-popupOpen.addEventListener ('click', function() {
-    popup.removeAttribute('class');
-    popup.setAttribute('class', 'modal__block')
-})
+const openModal = () => {
+    popup.classList.add('modal__show');
+}
 
-popupClose.addEventListener('click', function() {
-    popup.removeAttribute('class');
-    popup.setAttribute('class', 'modal__none')
-})
-
-modalBg.addEventListener('click', function() {
-    popup.removeAttribute('class');
-    popup.setAttribute('class', 'modal__none')
-})
+popupOpen.addEventListener ('click', openModal);
+popupClose.addEventListener('click', closeModal);
+modalBg.addEventListener('click', closeModal);
