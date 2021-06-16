@@ -33,7 +33,7 @@
                     <img class="header__logo header__logo__index" src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс">
                 </a>
                 <nav class="nav">
-                    <h2 style="display: none;">навигация по сайту</h2>
+                    <h2 class="visually__hiden">навигация по сайту</h2>
                     <ul class="nav__list">
                         <li class="nav__list__elem">
                             <a class="nav__list__link header__link" href="#" target="_blank">студия</a>
@@ -139,7 +139,7 @@
                             <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
                             </svg>
-                        <img class="list__elem__img" src="img/catalog/project_sedona.jpg" width="358" height="578" alt="дизайн проекта sedona">
+                            <img class="list__elem__img" src="img/catalog/project_sedona.jpg" width="358" height="578" alt="дизайн проекта sedona">
                         <div class="list__elem__info__block">
                             <!--hover block-->
                             <a href="#" class="elem__info__block__title"><h3 class="elem__info__block__title__text">Sedona</h3></a>
@@ -213,21 +213,19 @@
             </section>
         </div>
     </main>
-    <footer class="footer catalog__footer">
+    <footer class="footer">
         <section class="contact__block">
             <h2 class="visually__hiden">Где нас найти?</h2>
-            <!--display = "none" - css-->
             <iframe class="contact__block__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4867.270615831888!2d16.921728030802896!3d52.413285486124636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cad42c1d4d%3A0x78a2c4b6155b92e7!2sCrafton%20Agencja!5e0!3m2!1sru!2spl!4v1621812986636!5m2!1sru!2spl"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
             <div class="container footer__container__map">
                 <div class="contact__block__info">
-                    <!--position: absolute; after iframe block-->
                     <h3 class="contact__block__title">NЁRDS DESIGN STUDIO</h3>
                     <address class="contact__block__address">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</address>
                     <a class="contact__block__tel" href="tel:+78005558628">+7 800 555-86-28</a>
-                    <p class="contack__block__button"><button class="contact__block__btn standart__btn" type="button">Напишите нам</button></p>
+                    <p class="contack__block__button"><button id="modal__open" class="contact__block__btn standart__btn" type="button">Напишите нам</button></p>
                 </div>
             </div>
         </section>
@@ -266,6 +264,53 @@
             </div>
         </div>
     </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal__body">
+            <div id="modal__bg" class="modal__bg"></div>
+            <div class="modal__content" >
+                <h2 class="visually__hiden">Форма для связи с нами!</h2>
+                <div class="close__modal">
+                    <button id="modal__close" class="close__modal__btn" type="button" aria-label="закрыть модальное окно">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z" fill="#FB565A"/>
+                        </svg>
+                    </button>
+                </div>
+                <form class="modal__form" action="https://echo.htmlacademy.ru/" name="contack__form" method="POST">
+                    <fieldset class="modal__form__fieldset">
+                        <legend class="modal__form__legend">Напишите нам</legend>
+                        <div class="modal__form__block">
+                            <div class="form__name__email">
+                                <div class="modal__form__name">
+                                    <label class="modal__label modal__label__name" for="modal__text">Ваше имя:</label>
+                                    <div>
+                                        <input class="modal__input modal__input__name" type="text" id="modal__text" placeholder="Имя Фамилия">
+                                    </div>
+                                </div>
+                                <div class="modal__form__email">
+                                    <label class="modal__label modal__label__email" for="modal__email">Ваш email:</label>
+                                    <div>
+                                        <input class="modal__input modal__input__email" type="email" id="modal__email" placeholder="email@example.com ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__form__text">
+                                <label class="modal__label modal__label__textarea" for="text_mail">Текст письма:</label>
+                                <div>
+                                    <textarea class="modal__input__textarea modal__input" name="text_mail" id="text_mail" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal__btn__block">
+                                <button class="modal__btn__submit standart__btn" type="submit">Отправить</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
