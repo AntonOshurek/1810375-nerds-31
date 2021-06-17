@@ -33,18 +33,18 @@ const popupOpen = document.getElementById('modal__open'); /*popup open button*/
 const modalBg = document.getElementById('modal__bg');
 const submitBtn = document.querySelector('.modal__btn__submit'); //submit modal form btn
 const body = document.getElementById('body');
-console.log(body);
+
 
 //body.setAttribute(tabindex, 0);
 //tabindex="число"
 const closeModal = () => {
     popup.classList.remove('modal__show');
-    body.classList.remove("overfolow__body");
+    body.classList.remove("overflow__body");
 };
 
 const openModal = () => {
     popup.classList.add('modal__show');
-    body.classList.add("overfolow__body");
+    body.classList.add("overflow__body");
     modalKeyOpt();
 };
 
