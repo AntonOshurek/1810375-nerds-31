@@ -65,6 +65,7 @@
             <aside class="aside__sort__form">
                 <h2 class="visually__hiden">Форма сортировки для каталога</h2>
                 <form class="main__catalog__sort form" name="form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
+
                     <fieldset class="sort__cost sort__form__block">
                         <legend class="sort__legend sort__legend__cost">Стоимость:</legend>
                         <input class="sort__cost__range" type="range" min="1" max="100" value="50" id="the_cost">
@@ -77,45 +78,57 @@
                             </label>
                         </div>
                     </fieldset>
+
                     <fieldset class="sort__grid sort__form__block">
                         <legend class="sort__legend sort__legend_grid">Сетка:</legend>
-                        <label class="sort__lable">
-                            <input type="radio" id="grid_1" name="grid" value="1" checked/>
+                        <label class="sort__lable sort__grid__lable">
+                            <input class="sort__grid__input" type="radio" id="grid_1" name="grid" value="1" disabled/>
+                            <span class="sort__grid__check__box"></span>
                             Адаптивная
                         </label>
-                        <label class="sort__lable">
-                            <input type="radio" id="grid_2" name="grid" value="2" disabled />
+                        <label class="sort__lable sort__grid__lable">
+                            <input class="sort__grid__input" type="radio" id="grid_2" name="grid" value="2"/>
+                            <span class="sort__grid__check__box"></span>
                             Фиксированная
                         </label>
-                        <label class="sort__lable">
-                            <input type="radio" id="grid_3" name="grid" value="3" />
+                        <label class="sort__lable sort__grid__lable">
+                            <input class="sort__grid__input" type="radio" id="grid_3" name="grid" value="3"/>
+                            <span class="sort__grid__check__box"></span>
                             Резиновая
                         </label>
                     </fieldset>
+
                     <fieldset class="sort__features sort__form__block">
                         <legend class="sort__legend sort__legend__features">Особенности:</legend>
-                        <label class="sort__lable">
-                            <input type="checkbox" id="features_1" name="features" value="1" checked/>
+                        <label class="sort__lable sort__features__lable">
+                            <input class="sort__features__input" type="checkbox" id="features_1" name="features" value="1" checked/>
+                            <span class="sort__features__check__box"></span>
                             Слайдер
                         </label>
-                        <label class="sort__lable">
-                            <input type="checkbox" id="features_2" name="features" value="2" />
+                        <label class="sort__lable sort__features__lable">
+                            <input class="sort__features__input" type="checkbox" id="features_2" name="features" value="2" />
+                            <span class="sort__features__check__box"></span>
                             Блок преимуществ
                         </label>
-                        <label class="sort__lable">
-                            <input type="checkbox" id="features_3" name="features" value="3" checked />
+                        <label class="sort__lable sort__features__lable">
+                            <input class="sort__features__input" type="checkbox" id="features_3" name="features" value="3" checked />
+                            <span class="sort__features__check__box"></span>
                             Новости
                         </label>
-                        <label class="sort__lable">
-                            <input type="checkbox" id="features_4" name="features" value="4" />
+                        <label class="sort__lable sort__features__lable">
+                            <input class="sort__features__input" type="checkbox" id="features_4" name="features" value="4" />
+                            <span class="sort__features__check__box"></span>
                             Галерея
                         </label>
-                        <label class="sort__lable">
-                            <input type="checkbox" id="features_5" name="features" value="5" />
+                        <label class="sort__lable sort__features__lable">
+                            <input class="sort__features__input" type="checkbox" id="features_5" name="features" value="5" />
+                            <span class="sort__features__check__box"></span>
                             Корзина
                         </label>
                     </fieldset>
+
                     <button class="main__catalog__sort__btn" type="submit">ПОКАЗАТЬ</button>
+
                 </form>
             </aside>
             <section class="main__catalog__list">
@@ -126,16 +139,16 @@
                         <li class="sort__list__list__elem"><button class="sort__list__elem__active" type="button">По цене</button></li>
                         <li class="sort__list__list__elem"><button class="sort__list__elem" type="button">По типу</button></li>
                         <li class="sort__list__list__elem"><button class="sort__list__elem" type="button">По названию</button></li>
-                        <li class="sort__list__list__elem">
+                        <li class="sort__list__list__elem sort__list__elem__btn">
                             <button class="sort__list__elem list__elem__down__btn list__elem__btn" type="button" aria-label="сортировка от большего значения"></button>
                         </li>
-                        <li class="sort__list__list__elem">
+                        <li class="sort__list__list__elem sort__list__elem__btn">
                             <button class="sort__list__elem list__elem__up__btn list__elem__btn" type="button" aria-label="сортировка от меньшего значения"></button>
                         </li>
                     </ul>
                 </div>
                 <ul class="catalog__list">
-                    <li class="catalog__list__elem">
+                    <li class="catalog__list__elem" tabindex="0">
                             <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
                             </svg>
@@ -147,7 +160,7 @@
                             <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li class="catalog__list__elem">
+                    <li class="catalog__list__elem" tabindex="0">
                         <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
                         </svg>
@@ -158,7 +171,7 @@
                             <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li class="catalog__list__elem">
+                    <li class="catalog__list__elem" tabindex="0">
                         <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
                         </svg>
@@ -170,7 +183,7 @@
                             <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li class="catalog__list__elem">
+                    <li class="catalog__list__elem" tabindex="0">
                         <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
                         </svg>
@@ -181,7 +194,7 @@
                             <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li class="catalog__list__elem">
+                    <li class="catalog__list__elem" tabindex="0">
                         <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
                         </svg>
@@ -192,7 +205,7 @@
                             <button class="elem__info__block__btn standart__btn" type="button">9 900 &#8381;</button>
                         </div>
                     </li>
-                    <li class="catalog__list__elem">
+                    <li class="catalog__list__elem" tabindex="0">
                         <svg class="catalog__list__elem__svg" width="360" height="40" viewBox="0 0 360 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H356C358.2 0 360 1.8 360 4V40H0V4C0 1.8 1.8 0 4 0ZM16.9288 23.5C18.1792 25.6658 20.4901 27 22.991 27C26.857 27 29.991 23.866 29.991 20C29.991 16.134 26.857 13 22.991 13C20.4901 13 18.1792 14.3342 16.9288 16.5C15.6784 18.6658 15.6784 21.3342 16.9288 23.5ZM46.002 27C43.5011 27 41.1902 25.6658 39.9398 23.5C38.6893 21.3342 38.6893 18.6658 39.9398 16.5C41.1902 14.3342 43.5011 13 46.002 13C49.8679 13 53.002 16.134 53.002 20C53.002 23.866 49.8679 27 46.002 27ZM62.9505 23.5C64.201 25.6658 66.5118 27 69.0127 27C72.8787 27 76.0127 23.866 76.0127 20C76.0127 16.134 72.8787 13 69.0127 13C66.5118 13 64.201 14.3342 62.9505 16.5C61.7001 18.6658 61.7001 21.3342 62.9505 23.5Z" fill="#4D4D4D"/>
                         </svg>

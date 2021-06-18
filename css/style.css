@@ -606,16 +606,15 @@
     font-size: 36px;
     line-height: 36px;
     color: var(--standart-black);
-    margin: 10px 0 0 0 ;
+    margin: 0 0 10px 0 ;
     padding: 0;
-    margin: 0;
 }
 
 .footer__text__desc {
     font-size: 16px;
     line-height: 22px;
     color: var(--goshawk-grey);
-    margin: 10px 0 0 0;
+    margin: 0;
 }
 
                                                             /*catalog Page style*/
@@ -691,6 +690,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 .sort__list__elem{
@@ -712,22 +712,28 @@
     border: none;
 }
 
-.sort__list__list__elem {
-    display: inline-block;
+.sort__list__list__elem:not(:nth-child(3n)) {
     margin-right: 25px;
-}
-
-.sort__list__list__elem:last-child {
-    margin-right: 0;
 }
 
 .sort__list__elem:hover {
     opacity: 0.6;
 }
 
-.sort__list__elem:active {
+.sort__list__elem:active,
+.sort__list__elem:focus{
     opacity: 1;
 }
+
+.sort__list__elem__btn:not(:last-child) {
+    margin-left: 45px;
+    margin-right: 18px;
+}
+
+.sort__list__elem__btn:last-child {
+        margin: 0;
+}
+
 
 .list__elem__btn {
     width: 12px;
@@ -736,7 +742,6 @@
     background-repeat: no-repeat;
     border-color: transparent;
     background-color: transparent;
-    outline: none;
 }
 
 .list__elem__up__btn {
@@ -789,7 +794,8 @@
         transition: 0.5s; 
 }
 
-.catalog__list__elem:hover .list__elem__info__block{
+.catalog__list__elem:hover .list__elem__info__block,
+.catalog__list__elem:focus .list__elem__info__block {
     display: block;
 }
 
@@ -846,6 +852,10 @@
 }
 
 /*sort forms block*/
+
+.aside__sort__form {
+    max-width: 260px;
+}
 
 .sort__form__block {
     border: none;
@@ -948,6 +958,81 @@
     background-color: var(--grey-d5);
     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
     color: rgba(0, 0, 0, 0.3);
+}
+
+/*sort block custom style for forms*/
+
+                                        /*radio*/
+.sort__grid__lable {
+    margin-left: 1.2em;
+}
+
+.sort__grid__input {
+    position: absolute; /*убали пробел, который остался посел appearance*/
+    -webkit-appearance: none; /*спрятали стандартный input*/
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.sort__grid__check__box { /*span*/
+    position: absolute;
+    margin-left: -1.2em;
+    width: 1em;
+    height: 1em;
+    background-image: url(../img/catalog/radio.svg);
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    background-size: 1em;
+}
+
+.sort__grid__lable:hover .sort__grid__check__box {
+    opacity: 1;                          /*меняем прозрачность при навелении*/
+}
+
+.sort__grid__input:disabled + .sort__grid__check__box, /*это работает*/
+.sort__grid__input:disabled ~ .sort__grid__lable {       /*а это нет*/
+    opacity: 0.3;
+}
+
+/*checked*/
+
+.sort__grid__input:checked + .sort__grid__check__box {
+    background-image: url(../img/catalog/radio-on.svg);
+}
+
+                                        /*checkbox*/
+
+.sort__features__lable {
+    margin-left: 1.2em;
+}
+
+.sort__features__input {
+    position: absolute; /*убали пробел, который остался посел appearance*/
+    -webkit-appearance: none; /*спрятали стандартный input*/
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.sort__features__check__box {
+    position: absolute;
+    margin-left: -1.2em;
+    margin-bottom: -5px;
+    width: 1em;
+    height: 1em;
+    background-image: url(../img/catalog/checkbox-on.svg);
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    background-size: 1em;
+}
+
+.sort__features__lable:hover .sort__features__check__box {
+    opacity: 1;                 /*меняем прозрачность при навелении*/
+}
+
+/*checked*/
+
+.sort__features__input:checked + .sort__features__check__box {
+    background-image: url(../img/catalog/checkbox-off.svg);
 }
 
 /*pagination block*/
