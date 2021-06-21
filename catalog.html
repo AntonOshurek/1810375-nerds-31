@@ -29,11 +29,11 @@
         <h1 class="visually__hiden">Каталог дизайн студии нёрдс</h1>
         <div class="container">
             <div class="header__active">
-                <a href="index.html" aria-label="вернуться на главную страницу">
+                <a class="header__logo__link" href="index.html" aria-label="вернуться на главную страницу">
                     <img class="header__logo header__logo__index" src="img/nerds_logo.svg" width="160" height="65" alt="логотип дизайн студии нёрдс">
                 </a>
                 <nav class="nav">
-                    <h2 class="visually__hiden">навигация по сайту</h2>
+                    <h2 style="display: none;">навигация по сайту</h2>
                     <ul class="nav__list">
                         <li class="nav__list__elem">
                             <a class="nav__list__link header__link" href="#" target="_blank">студия</a>
@@ -50,7 +50,8 @@
                     </ul>
                 </nav>
                 <a href="#" target="_blank" class="header__cart header__link">
-                    <svg class="header__cart__logo" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#A6A6A6"/></svg>
+                    <svg class="header__cart__logo" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#A6A6A6"/></svg>
                     корзина
                 </a>
             </div>
@@ -60,7 +61,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" >
         <div class="container main__catalog">
             <aside class="aside__sort__form">
                 <h2 class="visually__hiden">Форма сортировки для каталога</h2>
@@ -70,10 +71,10 @@
                         <legend class="sort__legend sort__legend__cost">Стоимость:</legend>
                         <input class="sort__cost__range" type="range" min="1" max="100" value="50" id="the_cost">
                         <div class="sort__cost__fromTo">
-                            <label class="sort__lable">От
+                            <label class="sort__label">От
                                 <input id="from" class="cost__input" type="text" name="from" placeholder="0" />
                             </label>
-                            <label class="sort__lable">До
+                            <label class="sort__label">До
                                 <input id="to" class="cost__input" type="text" name="to" placeholder="100" />
                             </label>
                         </div>
@@ -81,49 +82,49 @@
 
                     <fieldset class="sort__grid sort__form__block">
                         <legend class="sort__legend sort__legend_grid">Сетка:</legend>
-                        <label class="sort__lable sort__grid__lable">
-                            <input class="sort__grid__input" type="radio" id="grid_1" name="grid" value="1" disabled/>
+                        <label class="sort__label sort__grid__label">
+                            <input class="sort__grid__input" type="radio" id="grid_adaptive" name="grid" value="1" checked/>
                             <span class="sort__grid__check__box"></span>
-                            Адаптивная
+                            <span class="slider">Адаптивная</span>
                         </label>
-                        <label class="sort__lable sort__grid__lable">
-                            <input class="sort__grid__input" type="radio" id="grid_2" name="grid" value="2"/>
+                        <label class="sort__label sort__grid__label">
+                            <input class="sort__grid__input" type="radio" id="grid_fixed" name="grid" value="2"/>
                             <span class="sort__grid__check__box"></span>
-                            Фиксированная
+                            <span class="slider">Фиксированная</span>
                         </label>
-                        <label class="sort__lable sort__grid__lable">
-                            <input class="sort__grid__input" type="radio" id="grid_3" name="grid" value="3"/>
+                        <label class="sort__label sort__grid__label">
+                            <input class="sort__grid__input" type="radio" id="grid_responsive" name="grid" value="3"/>
                             <span class="sort__grid__check__box"></span>
-                            Резиновая
+                            <span class="slider">Резиновая</span>
                         </label>
                     </fieldset>
 
                     <fieldset class="sort__features sort__form__block">
                         <legend class="sort__legend sort__legend__features">Особенности:</legend>
-                        <label class="sort__lable sort__features__lable">
-                            <input class="sort__features__input" type="checkbox" id="features_1" name="features" value="1" checked/>
+                        <label class="sort__label sort__features__label" aria-label="Слайдер">
+                            <input class="sort__features__input" type="checkbox" id="features_slider" name="features" value="1" checked/>
                             <span class="sort__features__check__box"></span>
-                            Слайдер
+                            <span class="slider">Слайдер</span>
                         </label>
-                        <label class="sort__lable sort__features__lable">
-                            <input class="sort__features__input" type="checkbox" id="features_2" name="features" value="2" />
+                        <label class="sort__label sort__features__label" aria-label="Блок преимуществ">
+                            <input class="sort__features__input" type="checkbox" id="features_advantages" name="features" value="2"/>
                             <span class="sort__features__check__box"></span>
-                            Блок преимуществ
+                            <span class="slider">Блок преимуществ</span>
                         </label>
-                        <label class="sort__lable sort__features__lable">
-                            <input class="sort__features__input" type="checkbox" id="features_3" name="features" value="3" checked />
+                        <label class="sort__label sort__features__label" aria-label="Новости">
+                            <input class="sort__features__input" type="checkbox" id="features_news" name="features" value="3" checked/>
                             <span class="sort__features__check__box"></span>
-                            Новости
+                            <span class="slider">Новости</span>
                         </label>
-                        <label class="sort__lable sort__features__lable">
-                            <input class="sort__features__input" type="checkbox" id="features_4" name="features" value="4" />
+                        <label class="sort__label sort__features__label" aria-label="Галерея">
+                            <input class="sort__features__input" type="checkbox" id="features_gallery" name="features" value="4" />
                             <span class="sort__features__check__box"></span>
-                            Галерея
+                            <span class="slider">Галерея</span>
                         </label>
-                        <label class="sort__lable sort__features__lable">
-                            <input class="sort__features__input" type="checkbox" id="features_5" name="features" value="5" />
+                        <label class="sort__label sort__features__label" aria-label="Корзина">
+                            <input class="sort__features__input" type="checkbox" id="features_cart" name="features" value="5" />
                             <span class="sort__features__check__box"></span>
-                            Корзина
+                            <span class="slider">Корзина</span>
                         </label>
                     </fieldset>
 

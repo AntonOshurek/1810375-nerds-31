@@ -79,7 +79,9 @@
 
 .web__offers__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: 300px 300px 300px;   
+    grid-column-gap: 100px; 
 }
 
 .about__us {
@@ -182,6 +184,7 @@
     font-size: 16px;
     line-height: 30px;
     text-transform: uppercase;
+    border-bottom: 2px solid transparent;
 }
 
 .header__link:hover{
@@ -190,6 +193,7 @@
 
 /*for active link*/
 .header__link__active {  
+    padding-bottom: 13px;
     border-bottom: 2px solid var(--lazy-reed);
     pointer-events: none;
 }
@@ -226,6 +230,7 @@
     width: 100%;
     background-image: url(../img/nerds-index-slide1.webp);
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: right top;
 }
 
@@ -256,6 +261,7 @@
 
 .carousel__link {
     display: inline-block;
+    vertical-align: baseline;
     padding: 17px 54px 15px 54px;
 }
 
@@ -310,8 +316,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin-right: 100px;
-
 }
 
 .web__offer:last-child {
@@ -328,11 +332,12 @@
 }
 
 .web__offer__img {
-    background-color: var(--lazy-grey);
+    background-color: var(--standart-white);
     width: 300px;
     height: 146px;  
     margin: 0 0 25px 0;
     order: -1;
+    object-fit: contain;
 }
 
 .web__offer__text {
@@ -417,10 +422,11 @@
 /*stats*/
 .about__us__stat__img {
     display: flex;
-    background-color: var(--lazy-grey);
+    background-color: var(--standart-white);
     width: 360px;
     height: 208px;
     margin: 0 0 37px 0;
+    object-fit: contain;
 }
 
 .about__us__stat__list__title {
@@ -495,6 +501,10 @@
 
 .our__partners__link:active {
     opacity: 0.1;
+}
+
+.our__parter__img {
+    object-fit: scale-down;
 }
                         /*footer block*/
                     /*footer=>contact block*/
@@ -572,7 +582,6 @@
     margin: 0px 0px;
     padding: 0px 0px;
     display: flex;
-    justify-content: left;
     align-items: center;
 }
 
@@ -623,6 +632,10 @@
     text-align: center;
     margin-top: 64px;
     margin-bottom: 108px;
+}
+
+.header__logo__link {
+    height: 65px;
 }
 
 .header__logo__index:hover {
@@ -781,6 +794,7 @@
 .list__elem__img {
     background-color: var(--grey-d5);
     box-shadow: 0px 3px 6px 1px #888888;
+    object-fit: cover;
 }
 
 .catalog__list__elem:hover:before {
@@ -796,7 +810,10 @@
 
 .catalog__list__elem:hover .list__elem__info__block,
 .catalog__list__elem:focus .list__elem__info__block {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    
+    transform: perspective(600px) translate(0px, 0%) rotatex(0deg);
 }
 
 .list__elem__info__block {
@@ -807,7 +824,11 @@
     padding: 26px 0px 44px 0px;
     text-align: center;
     background-color: var(--lazy-white);
-    display: none; /*position absolut hover block*/
+    /*display: none;*/ /*position absolut hover block*/
+    visibility: hidden;
+    opacity: 0;
+    transform: perspective(600px) translate(0, -100%) rotatex(45deg);
+    transition: 0.6s;
 }
 
 .elem__info__block__title {
@@ -911,12 +932,6 @@
     text-align: center;
 }
 
-.sort__form__block input[type="radio"]:disabled + label,
-.sort__form__block input[type="text"]:disabled + label,
-.sort__form__block input[type="checkbox"]:disabled + label {
-    opacity: 0.3;
-}
-
 .sort__legend {
     font-weight: bold;
     text-transform: uppercase;
@@ -925,19 +940,15 @@
     color: var(--standart-black);
 }
 
-.sort__lable {
+.sort__label {
     font-size: 16px;
     line-height: 20px;
     color: var(--lazy-black);
     margin-bottom: 15px;
 }
 
-.sort__lable:last-child {
+.sort__label:last-child {
     margin-bottom: 0;
-}
-
-.sort__lable__block {
-    opacity: 0.3;
 }
 
 .main__catalog__sort__btn {
@@ -963,8 +974,10 @@
 /*sort block custom style for forms*/
 
                                         /*radio*/
-.sort__grid__lable {
-    margin-left: 1.2em;
+.sort__grid__label {
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
 }
 
 .sort__grid__input {
@@ -976,34 +989,40 @@
 
 .sort__grid__check__box { /*span*/
     position: absolute;
-    margin-left: -1.2em;
-    width: 1em;
-    height: 1em;
+    margin-left: -1.8em;
     background-image: url(../img/catalog/radio.svg);
     background-repeat: no-repeat;
     opacity: 0.6;
-    background-size: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    background-size: 1.5em;
 }
 
-.sort__grid__lable:hover .sort__grid__check__box {
-    opacity: 1;                          /*меняем прозрачность при навелении*/
+/*hover*/
+.sort__grid__label:hover .sort__grid__check__box {
+    opacity: 1;
 }
 
-.sort__grid__input:disabled + .sort__grid__check__box, /*это работает*/
-.sort__grid__input:disabled ~ .sort__grid__lable {       /*а это нет*/
+/*disabled*/
+.sort__grid__input:disabled + .sort__grid__check__box{
     opacity: 0.3;
 }
 
-/*checked*/
+/*focus*/
+.sort__grid__input:focus + .sort__grid__check__box {
+    opacity: 1;
+}
 
+/*checked*/
 .sort__grid__input:checked + .sort__grid__check__box {
     background-image: url(../img/catalog/radio-on.svg);
 }
 
                                         /*checkbox*/
 
-.sort__features__lable {
+.sort__features__label {
     margin-left: 1.2em;
+
 }
 
 .sort__features__input {
@@ -1015,41 +1034,56 @@
 
 .sort__features__check__box {
     position: absolute;
-    margin-left: -1.2em;
+    margin-left: -1.8em;
     margin-bottom: -5px;
-    width: 1em;
-    height: 1em;
-    background-image: url(../img/catalog/checkbox-on.svg);
+    background-image: url('../img/catalog/checkbox-off.svg');
     background-repeat: no-repeat;
     opacity: 0.6;
-    background-size: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    background-size: 1.5em;
 }
 
-.sort__features__lable:hover .sort__features__check__box {
-    opacity: 1;                 /*меняем прозрачность при навелении*/
+.slider {
+    margin: 0;
+    padding: 0;
+}
+
+.sort__features__input:disabled ~ .slider {
+    opacity: 0.3;
+}
+
+/*hover*/
+.sort__features__label:hover .sort__features__check__box {
+    opacity: 1;               
+}
+
+/*disabled*/
+.sort__features__input:disabled + .sort__features__check__box {
+    opacity: 0.3;
+}
+
+/*focus*/
+.sort__features__input:focus + .sort__features__check__box {
+    opacity: 1;
 }
 
 /*checked*/
-
 .sort__features__input:checked + .sort__features__check__box {
-    background-image: url(../img/catalog/checkbox-off.svg);
+    background-image: url('../img/catalog/checkbox-on.svg'); 
 }
 
-/*pagination block*/
+                                                        /*pagination block*/
 .catalog__pagination {
     list-style: none;
     padding-left: 0;
     margin-top: 54px;
     margin-bottom: 60px;
+    display: flex;
 }
 
-.pagination__page {
-    display: inline-block;
+.pagination__page:not(:last-child) {
     margin-right: 11px;
-}
-
-.pagination__page:last-child {
-    margin-right: 0;
 }
 
 .pagination__page__link {
