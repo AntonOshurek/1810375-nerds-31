@@ -812,8 +812,6 @@
 .catalog__list__elem:focus .list__elem__info__block {
     visibility: visible;
     opacity: 1;
-    
-    transform: perspective(600px) translate(0px, 0%) rotatex(0deg);
 }
 
 .list__elem__info__block {
@@ -824,10 +822,8 @@
     padding: 26px 0px 44px 0px;
     text-align: center;
     background-color: var(--lazy-white);
-    /*display: none;*/ /*position absolut hover block*/
     visibility: hidden;
     opacity: 0;
-    transform: perspective(600px) translate(0, -100%) rotatex(45deg);
     transition: 0.6s;
 }
 
