@@ -95,7 +95,7 @@
 
 .our__partners__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     margin: 0px 0px;
@@ -155,7 +155,7 @@
 .header__active {
     margin: 0;
     padding: 0;
-    margin-top: 37px;
+    margin-top: 49px;
 }
 
 .nav__list {
@@ -230,7 +230,7 @@
     width: 100%;
     background-image: url(../img/nerds-index-slide1.webp);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 760px contain;
     background-position: right top;
 }
 
@@ -252,17 +252,21 @@
     line-height: 55px;
     color: var(--standart-black);
     margin: 0 0px 25px 0px;
+    max-width: 600px;
 }
 
 .carousel__text {
     color: var(--lazy-black);
     margin: 0 0 38px 0;
+    max-width: 450px;
 }
 
 .carousel__link {
     display: inline-block;
     vertical-align: baseline;
     padding: 17px 54px 15px 54px;
+    max-width: 240px;
+    margin-bottom: 15px;
 }
 
 .header__carousel__button {
@@ -300,7 +304,7 @@
         /*main=>web offers block*/
 
 .web__offers {
-    margin-top: 68px;
+    margin-top: 80px;
     padding-bottom: 80px;
     border-bottom: 2px solid var(--lazy-white);
 }
@@ -607,7 +611,7 @@
 }
 
 .footer__text {
-    margin-left: 80px;
+    
 }
 
 .footer__text__title {
@@ -1223,11 +1227,12 @@
 
 .modal__input {
     width: 360px;
-    height: 50px;
+
     background: var(--standart-white);
     border: 2px solid var(--white-d7);
     box-sizing: border-box;
     border-radius: 3px;
+    padding: 16px 16px 16px 16px;
 }
 
 .modal__input:hover {
