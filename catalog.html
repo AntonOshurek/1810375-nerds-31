@@ -50,7 +50,7 @@
                     </ul>
                 </nav>
                 <a href="#" target="_blank" class="header__cart header__link">
-                    <svg class="header__cart__logo" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" focusable="false" class="header__cart__logo" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z" fill="#A6A6A6"/></svg>
                     корзина
                 </a>
@@ -67,16 +67,16 @@
                 <h2 class="visually__hiden">Форма сортировки для каталога</h2>
                 <form class="main__catalog__sort form" name="form" action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data">
 
-                    <fieldset class="sort__cost sort__form__block">
-                        <legend class="sort__legend sort__legend__cost">Стоимость:</legend>
-                        <input class="sort__cost__range" type="range" min="1" max="100" value="50" id="the_cost">
-                        <div class="sort__cost__fromTo">
-                            <label class="sort__label">От
-                                <input id="from" class="cost__input" type="text" name="from" placeholder="0" />
-                            </label>
-                            <label class="sort__label">До
-                                <input id="to" class="cost__input" type="text" name="to" placeholder="100" />
-                            </label>
+                    <fieldset class="fieldset" style="--a: 0; --b: 15000; --min: 0; --max: 20000;">
+                        <legend class="legend">Стоимость:</legend>
+            
+                        <div class="range-set">
+                            <label class="label label-a" for="a" aria-label="Первое значение диапазона">От</label>
+                            <output class="output output-a" name="a" for="a">0</output>
+                            <input class="range-input range-input-a" id="a" name="price-range" type="range" min="0" value="0" max="20000" step="200"/>
+                            <label class="label label-b" for="b" aria-label="Второе значение диапазона">До</label>
+                            <output class="output output-b" name="b" for="b">15000</output>
+                            <input class="range-input range-input-b" id="b" name="price-range" type="range" min="0" value="15000" max="20000" step="200"/>
                         </div>
                     </fieldset>
 
@@ -232,7 +232,7 @@
             <h2 class="visually__hiden">Где нас найти?</h2>
             <iframe class="contact__block__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4867.270615831888!2d16.921728030802896!3d52.413285486124636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444cad42c1d4d%3A0x78a2c4b6155b92e7!2sCrafton%20Agencja!5e0!3m2!1sru!2spl!4v1621812986636!5m2!1sru!2spl"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                width="600" height="416" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
             <div class="container footer__container__map">
                 <div class="contact__block__info">
