@@ -61,25 +61,3 @@ function modalKeyOpt () {
 popupOpen.addEventListener ('click', openModal);
 popupClose.addEventListener('click', closeModal);
 modalBg.addEventListener('click', closeModal);
-
-
-//custom range
-// Находим в документе виджет диапазона
-const rangeSet = document.querySelector('.range-set')
-// Создаём объект для аутпутов
-const rangeOutputs = {}
-
-// Находим аутпуты и кладём их в соответствующие свойства объекта
-rangeOutputs.a = rangeSet.querySelector('[name="a"]')
-rangeOutputs.b = rangeSet.querySelector('[name="b"]')
-
-// Вешаем на виджет слушателя события ввода
-rangeSet.addEventListener('input', (event) => {
-	// Сохраняем инпут, на котором был произведён ввод
-	let et = event.target
-	// Введённое в инпут значение прокидываем его родителю в соответствующее кастомное свойство 
-	et.parentNode.style.setProperty(`--${et.id}`, + et.value)
-	// То же значение прокидываем и в соответствующий аутпут
-	rangeOutputs[`${et.id}`].value = et.value
-}, false)
-

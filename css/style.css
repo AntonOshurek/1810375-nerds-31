@@ -30,11 +30,14 @@
     --lazy-grey: #666;
     --standart-white: #fff;
     --white-d7: #D7DCDE;
+    --white-f1: #f1f1f1;
     --lazy-white: #EEEEEE;
     --grey-db: #DBDBDB;
     --grey-df: #DFDFDF;
     --grey-d5: #D5D5D5;;
     --grey-b4: #B4B9BB;
+    --grey-cf: #cfcfcf;
+    --grey-ab: #ababab;
     --lazy-reed: #FB565A;
     --active-red: #E74246;
     --dark-red: #D7373B;
@@ -788,6 +791,7 @@
 }
 
 .catalog__list__elem__svg {
+
     opacity: 0.12;
 }
 
@@ -914,6 +918,7 @@
     line-height: 20px;
     color: var(--lazy-black);
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 .sort__label:last-child {
@@ -942,35 +947,78 @@
 
 /*sort block custom style for forms*/
 
-/*custom range*/
+                                /*range*/
 
-/*.sort__cost {
-    padding: 0;
-    margin: 0 0 54px 0;
-}
-
-.cost__input {
-    background-color: var(--lazy-white);
+.sort__cost {
+    padding: 0px;
     border: none;
-    width: 80px;
-    height: 38px;
-    text-align: center;
+    width: 260px;
+    margin-bottom: 54px;
 }
-
-.sort__legend__cost {
-    margin-bottom: 48px;
-}
-
+  
 .sort__cost__range {
     width: 260px;
-    height: 80px;
+    margin-top: 48px;
 }
-
-.sort__cost__fromTo {
+  
+.range__controls {
+    position: relative;
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: var(--white-f1);
+    border-radius: 5px;
+}
+  
+.range__controls .scale {
+    height: 2px;
+    background: var(--white-d7);
+}
+  
+.range__controls .bar {
+    width: 70%;
+    height: 2px;
+    background: var(--green-standart);
+}
+  
+.range__controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--standart-white);
+    background-color: var(--grey-ab);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 var(--grey-cf);
+    cursor: pointer;
+}
+  
+.range__controls .toggle__min {
+    left: 18px;
+}
+  
+.range__controls .toggle__max {
+    left: 160px;
+}
+  
+.range__price__controls {
     display: flex;
     justify-content: space-between;
-}*/
-
+}
+  
+.sort__cost__input {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    color: var(--lazy-black);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--white-f1);
+}
                                         /*radio*/
 .sort__grid__label {
     margin-left: 1em;
@@ -979,8 +1027,8 @@
 }
 
 .sort__grid__input {
-    position: absolute; /*убали пробел, который остался посел appearance*/
-    -webkit-appearance: none; /*спрятали стандартный input*/
+    position: absolute;
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
@@ -1024,8 +1072,8 @@
 }
 
 .sort__features__input {
-    position: absolute; /*убали пробел, который остался посел appearance*/
-    -webkit-appearance: none; /*спрятали стандартный input*/
+    position: absolute;
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
@@ -1127,8 +1175,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1273,230 +1319,74 @@
 
 /*castom range*/
 
-:root {
-	--bg-primary: hsl(0deg 0% 100%);
-	--bg-secondary-light: hsl(0deg 0% 93%);
-	--bg-secondary-dark: hsl(0deg 0% 87%);
-	--bg-secondary-darker: hsl(0deg 0% 84%);
-	--text-primary: hsl(201deg 15% 18%);
-	--text-secondary: hsl(0deg 0% 0%);
-	--text-transparent: hsl(0deg 0% 0% / 0.3);
+
+.sort__cost {
+    padding: 0px;
+    border: none;
+    width: 260px;
+    margin-bottom: 54px;
 }
-
-.form {
-	margin: auto;
-	width: 260px;
+  
+.sort__cost__range {
+    width: 260px;
+    margin-top: 48px;
 }
-
-.fieldset {
-	all: unset;
-	display: block;
+  
+.range__controls {
+    position: relative;
+    height: 41px;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: var(--white-f1);
+    border-radius: 5px;
 }
-
-.legend {
-	margin-bottom: 48px;
-	line-height: 30px;
-	font-size: 18px;
-	font-weight: 700;
+  
+.range__controls .scale {
+    height: 2px;
+    background: var(--white-d7);
 }
-
-.range-set {
-/*  Площадка под инпуты */
-	--input-width: 100%;
-	--input-height: 80px;
-/*  Размер ползунков */
-	--thumb-diameter: 20px;
-	--thumb-radius: calc(var(--thumb-diameter) / 2);
-/*  Длина полного диапазона */
-	--diff: calc(var(--max) - var(--min));
-/* 	Характеристики трека */
-	--track-weight: 2px;
-	--track-length: calc(100% + 0px);
-	--track-color: hsl(203deg 11% 86%);
-/* 	Цвет и расположение выбранного диапазона на треке */
-	--bar-color: hsl(154deg 100% 40%);
-	--relative-a: calc((var(--a) - var(--min)) / var(--diff));
-	--relative-b: calc((var(--b) - var(--min)) / var(--diff));
-	--bar-length-max: calc(var(--track-length) - var(--thumb-diameter));
-	--bar-a: calc(var(--relative-a) * var(--bar-length-max) + var(--thumb-radius));
-	--bar-b: calc(var(--relative-b) * var(--bar-length-max) + var(--thumb-radius));
-	--bar-start: min(var(--bar-a), var(--bar-b));
-	--bar-end: max(var(--bar-a), var(--bar-b));
-/*  Длина выбранного диапазона */
-	--b-a: calc(var(--b) - var(--a));
-/*  Защита от значений меньше 1 и больше 0 */
-	--hyper-b-a: calc(var(--b-a) * 999999);
-/*  Второе значение всё ещё больше первого? 1 — да. 0 — нет. */
-	--is-b-greater-then-a: clamp(0, var(--hyper-b-a), 1);
-/* 	Расположение выводов значений: 2 и 5, если a меньше b, и наоборот, если больше */
-	--placement-output-a: calc(5 - 3 * var(--is-b-greater-then-a));
-	--placement-output-b: calc(2 + 3 * var(--is-b-greater-then-a));
-
-	display: grid;
-	grid-template-columns: repeat(2, max-content) 1fr repeat(2, max-content);
-	grid-template-rows: max-content max-content;
-	grid-template-areas:
-		"input   input    input   input    input"
-		"labal-a output-a   .   label-b output-b"
-	;
-	row-gap: 14px;
-	column-gap: 12px;
-	position: relative;
-	margin: 0 0 54px 0;
-	width: 100%;
-	width: var(--input-width);
-	border: 0;
-	font-size: 16px;
-	line-height: 22px;
+  
+.range__controls .bar {
+    width: 70%;
+    height: 2px;
+    background: var(--green-standart);
 }
-
-.range-set::before {  /*задний фон рэнжа*/
-	content: "";
-	grid-area: input;
-	background: var(--bg-secondary-light);
-	border-radius: 3px;
+  
+.range__controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 8px solid var(--standart-white);
+    background-color: var(--grey-ab);
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 var(--grey-cf);
+    cursor: pointer;
 }
-
-.range-input {
-	appearance: none;
-	grid-area: input;
-	z-index: 1;
-	margin: 0;
-	padding: calc((var(--input-height) - var(--thumb-diameter)) / 2) 20px;
-	background: none;
-	border-radius: 3px;
-	pointer-events: none;
-	color: inherit;
-	height: var(--thumb-diameter);
+  
+.range__controls .toggle__min {
+    left: 18px;
 }
-
-.range-input:focus {
-	z-index: 2;
-	outline: 2px solid currentColor;
-	outline-offset: 2px;
+  
+.range__controls .toggle__max {
+    left: 160px;
 }
-
-.range-input:focus:not(:focus-visible) {
-	outline: none;
+  
+.price__controls {
+    display: flex;
+    justify-content: space-between;
 }
-
-.range-input.range-input:focus-visible {
-	outline: 2px solid currentColor;
-	outline-offset: 2px;
-}
-
-.range-input::-webkit-slider-runnable-track {
-	appearance: none;
-	height: var(--track-d);
-}
-
-.range-input::-webkit-slider-container {  /*линия для ползунков*/
-	appearance: none;
-	align-self: center;
-	height: var(--track-weight);
-	background-image: 
-		linear-gradient(
-			90deg,
-			var(--track-color) calc(var(--bar-start) - var(--thumb-radius)),
-			transparent calc(var(--bar-start) - var(--thumb-radius)),
-			transparent calc(var(--bar-start) + var(--thumb-radius)),
-			var(--bar-color) calc(var(--bar-start) + var(--thumb-radius)),
-			var(--bar-color) calc(var(--bar-end) - var(--thumb-radius)),
-			transparent calc(var(--bar-end) - var(--thumb-radius)),
-			transparent calc(var(--bar-end) + var(--thumb-radius)),
-			var(--track-color) calc(var(--bar-end) + var(--thumb-radius))
-		);
-}
-
-.range-input::-moz-range-track { /*?????*/
-	appearance: none; 
-	height: var(--track-weight);
-	background-image: 
-		linear-gradient(
-			90deg,
-			var(--track-color) calc(var(--bar-start) - var(--thumb-radius)),
-			transparent calc(var(--bar-start) - var(--thumb-radius)),
-			transparent calc(var(--bar-start) + var(--thumb-radius)),
-			var(--bar-color) calc(var(--bar-start) + var(--thumb-radius)),
-			var(--bar-color) calc(var(--bar-end) - var(--thumb-radius)),
-			transparent calc(var(--bar-end) - var(--thumb-radius)),
-			transparent calc(var(--bar-end) + var(--thumb-radius)),
-			var(--track-color) calc(var(--bar-end) + var(--thumb-radius))
-		);
-}
-
-.range-input::-webkit-slider-thumb {
-	appearance: none;
-	box-sizing: border-box;
-	width: var(--thumb-diameter);
-	height: var(--thumb-diameter);
-	border: 8px solid hsl(0 0% 100% / 1);
-	background: none;
-	background-color: hsl(0deg 0% 67% / 1);
-	border-radius: var(--thumb-radius);
-	box-shadow: 0px 2px 1px var(--shadow-spread, 0px) hsl(0 0% 0% / 0.15);
-	pointer-events: auto;
-	cursor: grab;
-}
-
-.range-input::-moz-range-thumb {        /*?????*/
-	appearance: none;
-	box-sizing: border-box;
-	width: var(--thumb-diameter);
-	height: var(--thumb-diameter);
-	border: 8px solid hsl(0 0% 100% / 1);
-	background: none;
-	background-color: hsl(0deg 0% 67% / 1);
-	border-radius: var(--thumb-radius);
-	box-shadow: 0px 2px 1px var(--shadow-spread, 0px) hsl(0 0% 0% / 0.15);
-	pointer-events: auto;
-	cursor: grab;
-}
-
-.range-input::-moz-range-thumb:active {
-	cursor: grabbing;
-}
-
-.range-input::-webkit-slider-thumb:active {
-	cursor: grabbing;
-}
-
-.range-input:focus::-webkit-slider-thumb {
-	--shadow-spread: 1px;
-}
-
-.range-input:focus::-moz-range-thumb {
-	--shadow-spread: 1px;
-}
-
-.label {
-	padding: 8px 0;
-}
-
-.label-a {
-	grid-area: labal-a;
-}
-
-.label-b {
-	grid-area: label-b;
-}
-
-.output {
-	width: 80px;
-	display: inline-block;
-	padding: 8px 0;
-	vertical-align: baseline;
-	text-align: center;
-	border-radius: 3px;
-	background-color: var(--bg-secondary-light);
-}
-
-.output-a {
-	grid-area: output-a;
-	grid-column: var(--placement-output-a);
-}
-
-.output-b {
-	grid-area: output-b;
-	grid-column: var(--placement-output-b);
+  
+.sort__cost__input {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    color: var(--lazy-black);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--white-f1);
 }
