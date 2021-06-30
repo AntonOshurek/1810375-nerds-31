@@ -73,15 +73,17 @@
                                 <div class="scale">
                                     <div class="bar"></div>
                                 </div>
-                                <div class="toggle toggle__min"></div>
-                                <div class="toggle toggle__max"></div>
+                                <button class="toggle toggle__min" type="button"></button>
+                                <button class="toggle toggle__max" type="button"></button>
+                                <!--<div class="toggle toggle__min"></div>
+                                <div class="toggle toggle__max"></div>-->
                             </div>
                             <div class="range__price__controls">
                                 <label class="sort__label">
-                                    от <input class="sort__cost__input" type="number" name="min-price" value="0" step="200" max="20000" min="0">
+                                    от <input class="sort__cost__input min-price" type="number" name="min-price" value="0" step="200" max="20000" min="0">
                                 </label>
                                 <label class="sort__label">
-                                    до <input class="sort__cost__input" type="number" name="max-price" value="15000" step="200" max="20000" min="0">
+                                    до <input class="sort__cost__input max-price" type="number" name="max-price" value="20000" step="200" max="20000" min="0">
                                 </label>
                             </div>
                         </div>
@@ -138,7 +140,9 @@
             <section class="main__catalog__list">
                 <h2 class="visually__hiden">Каталог шаблонов сайтов</h2>
                 <div class="catalog__sort">
-                    <h3 class="sort__title">Сортировать:</h3>
+                    <div>
+                        <h3 class="sort__title">Сортировать:</h3>
+                    </div>
                     <ul class="sort__list">
                         <li class="sort__list__list__elem"><button class="sort__list__elem__active" type="button">По цене</button></li>
                         <li class="sort__list__list__elem"><button class="sort__list__elem" type="button">По типу</button></li>

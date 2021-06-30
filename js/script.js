@@ -1,9 +1,7 @@
-let tab = function() {
-    let tabNav = document.querySelectorAll('.tabs-nav__item')
-    let tabContent = document.querySelectorAll('.tab')
+const tab = function() {
+    const tabNav = document.querySelectorAll('.tabs-nav__item'),
+    tabContent = document.querySelectorAll('.tab');
     let tabName;
-    //console.log(tabNav);
-    //console.log(tabContent);
 
     tabNav.forEach(item => {
         item.addEventListener('click', selectTabNav)
@@ -27,16 +25,13 @@ let tab = function() {
 
 tab();
 
-const popup = document.getElementById('modal');  /*popup block*/
-const popupClose = document.getElementById('modal__close'); /*popup close btn*/
-const popupOpen = document.getElementById('modal__open'); /*popup open button*/
-const modalBg = document.getElementById('modal__bg');
-const submitBtn = document.querySelector('.modal__btn__submit'); //submit modal form btn
-const body = document.getElementById('body');
+const popup = document.getElementById('modal'),  /*popup block*/
+    popupClose = document.getElementById('modal__close'), /*popup close btn*/
+    popupOpen = document.getElementById('modal__open'), /*popup open button*/
+    modalBg = document.getElementById('modal__bg'),
+    submitBtn = document.querySelector('.modal__btn__submit'), //submit modal form btn
+    body = document.getElementById('body');
 
-
-//body.setAttribute(tabindex, 0);
-//tabindex="число"
 const closeModal = () => {
     popup.classList.remove('modal__show');
     body.classList.remove("overflow__body");
@@ -61,3 +56,63 @@ function modalKeyOpt () {
 popupOpen.addEventListener ('click', openModal);
 popupClose.addEventListener('click', closeModal);
 modalBg.addEventListener('click', closeModal);
+
+//custom Range
+
+const rangeToogleMin = document.querySelector('.toggle__min'),
+    rangeToogleMax = document.querySelector('.toggle__max'),
+    rangeBar = document.querySelector('.bar'),
+    rangeMinPrice = document.querySelector('.min-price'),
+    rangeMaxPrice = document.querySelector('.max-price'),
+    minValue = 0,
+    maxValue = 20000;
+
+    let currentMinValue = 0;
+    let currentMaxValue = 20000;
+
+    const setMaxValue = (newValue) => {
+        if (newValue <= 20000 && newValue >= 0) {
+            currentMaxValue = newValue;
+        }  else if (Math.sign(newValue) == -1 || Math.sign(newValue) == -0 ) {
+            currentMaxValue = minValue;
+        } else {
+            currentMaxValue = maxValue;
+        }
+      };
+
+      const getPositionMaxValue = () => (currentMaxValue / maxValue) * 100;
+      
+      const changeSecondRangeBtn = (e) => {
+        setMaxValue(e.target.value)
+        rangeToogleMax.style.left = `${getPositionMaxValue()}%`
+        rangeBar.style.width = `${getPositionMaxValue()}%`
+      };
+      
+      rangeMaxPrice.addEventListener('keyup', (e) => changeSecondRangeBtn(e));
+      
+      rangeMaxPrice.addEventListener('change', (e) => changeSecondRangeBtn(e));
+
+      const setMinValue = (newValue) => {
+        //currentMinValue = newValue
+        if (newValue <= 20000 && newValue >= 0) {
+            currentMinValue = newValue;
+        }   else if (Math.sign(newValue) == -1 || Math.sign(newValue) == -0 ) {
+            currentMinValue = minValue;
+        } else {
+            currentMinValue = maxValue;
+        }
+      };
+    
+      const getPositionMinValue = () => (currentMinValue / maxValue) * 100;
+      
+      const changeFirstRangeBtn = (e) => {
+        setMinValue(e.target.value)
+        rangeToogleMin.style.left = `${getPositionMinValue()}%`
+        rangeBar.style.left = `${getPositionMinValue()}%`
+        rangeBar.style.width = `${getPositionMaxValue() - getPositionMinValue()}%`
+      };
+      
+      rangeMinPrice.addEventListener('keyup', (e) => changeFirstRangeBtn(e));
+      
+      rangeMinPrice.addEventListener('change', (e) => changeFirstRangeBtn(e));
+
