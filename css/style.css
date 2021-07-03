@@ -14,6 +14,8 @@
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-items: start;
+
+    word-break: break-word;
 }
 
 .overflow__body {
@@ -94,6 +96,10 @@
 
 .about__us__stat {
     justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .our__partners__list {
@@ -112,6 +118,7 @@
 .footer__contacts {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    column-gap: 30px;
 }
 
 .footer__social__list {
@@ -382,6 +389,7 @@
     padding-top: 39px;
     padding-bottom: 73px;
     border-bottom: 2px solid var(--lazy-white);
+    word-break: normal;
 }
 
 .about__us__info__title {
@@ -432,7 +440,7 @@
     background-color: var(--standart-white);
     width: 360px;
     height: 208px;
-    margin: 0 0 37px 0;
+    margin: 0 0 28px 0;
     object-fit: contain;
 }
 
@@ -442,7 +450,7 @@
     color: var(--standart-black);
     font-size: 16px;
     line-height: 24px;
-    margin: 0 0 31px 0;
+    margin: 0 0 30px 0;
 }
 
 .about__us__stat__list {
@@ -455,6 +463,10 @@
 
 .stat__list__elem {
     flex: 1;
+}
+
+.stat__list__elem:not(:last-child) {
+    margin-right: 20px;
 }
 
 .stat__list__procent {
@@ -976,12 +988,10 @@
 .range__controls .scale {
     height: 2px;
     background: var(--white-d7);
+    position: relative;
 }
   
 .range__controls .bar {
-    /*width: 70%;
-    height: 2px;
-    background: var(--green-standart);*/
     position: absolute;
     top: 50%;
     left: 0px;
@@ -992,21 +1002,10 @@
 }
   
 .range__controls .toggle {
-    /*position: absolute;
-    top: 31px;
-    left: 0;
-    width: 4px;
-    height: 4px;
-    padding: 0;
-    border: 8px solid var(--standart-white);
-    background-color: var(--grey-ab);
-    border-radius: 50%;
-    box-shadow: 0 2px 1px 0 var(--grey-cf);
-    cursor: pointer;*/
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
     padding: 0;
@@ -1018,12 +1017,11 @@
 }
   
 .range__controls .toggle__min {
-    left: 0;  /*max 92,5*/
+    left: 0;
 }
   
 .range__controls .toggle__max {
     left: 100%;
-    transform: translateX(-100%) translateY(-50%);
 }
   
 .range__price__controls {
@@ -1114,6 +1112,7 @@
 .slider {
     margin: 0;
     padding: 0;
+    word-break: break-word;
 }
 
 .sort__features__input:disabled ~ .slider {

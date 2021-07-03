@@ -59,60 +59,59 @@ modalBg.addEventListener('click', closeModal);
 
 //custom Range
 
-const rangeToogleMin = document.querySelector('.toggle__min'),
-    rangeToogleMax = document.querySelector('.toggle__max'),
-    rangeBar = document.querySelector('.bar'),
-    rangeMinPrice = document.querySelector('.min-price'),
-    rangeMaxPrice = document.querySelector('.max-price'),
-    minValue = 0,
-    maxValue = 20000;
+const rangeToogleMin = document.querySelector('.toggle__min');
+const rangeToogleMax = document.querySelector('.toggle__max');
+const rangeBar = document.querySelector('.bar');
+const rangeMinPrice = document.querySelector('.min-price');
+const rangeMaxPrice = document.querySelector('.max-price');
+const minValue = 0;
+const maxValue = 20000;
 
-    let currentMinValue = 0;
-    let currentMaxValue = 20000;
+let currentMinValue = 0;
+let currentMaxValue = 20000;
 
-    const setMaxValue = (newValue) => {
-        if (newValue <= 20000 && newValue >= 0) {
-            currentMaxValue = newValue;
-        }  else if (Math.sign(newValue) == -1 || Math.sign(newValue) == -0 ) {
-            currentMaxValue = minValue;
-        } else {
-            currentMaxValue = maxValue;
-        }
-      };
+const setMaxValue = (newValue) => {
+    if (newValue <= 20000 && newValue >= 0) {
+        currentMaxValue = newValue;
+    }  else if (Math.sign(newValue) == -1 || Math.sign(newValue) == -0 ) {
+        currentMaxValue = minValue;
+    } else {
+        currentMaxValue = maxValue;
+    }
+};
 
-      const getPositionMaxValue = () => (currentMaxValue / maxValue) * 100;
+const getPositionMaxValue = () => (currentMaxValue / maxValue) * 100;
       
-      const changeSecondRangeBtn = (e) => {
-        setMaxValue(e.target.value)
-        rangeToogleMax.style.left = `${getPositionMaxValue()}%`
-        rangeBar.style.width = `${getPositionMaxValue()}%`
-      };
+const changeSecondRangeBtn = (e) => {
+    setMaxValue(e.target.value);
+        rangeToogleMax.style.left = `${getPositionMaxValue()}%`;
+        rangeBar.style.width = `${getPositionMaxValue() - getPositionMinValue()}%`;
+};
       
-      rangeMaxPrice.addEventListener('keyup', (e) => changeSecondRangeBtn(e));
-      
-      rangeMaxPrice.addEventListener('change', (e) => changeSecondRangeBtn(e));
-
-      const setMinValue = (newValue) => {
-        //currentMinValue = newValue
-        if (newValue <= 20000 && newValue >= 0) {
-            currentMinValue = newValue;
-        }   else if (Math.sign(newValue) == -1 || Math.sign(newValue) == -0 ) {
-            currentMinValue = minValue;
-        } else {
-            currentMinValue = maxValue;
-        }
-      };
+rangeMaxPrice.addEventListener('keyup', (e) => changeSecondRangeBtn(e));
     
-      const getPositionMinValue = () => (currentMinValue / maxValue) * 100;
+rangeMaxPrice.addEventListener('change', (e) => changeSecondRangeBtn(e));
+
+const setMinValue = (newValue) => {
+    if (newValue <= 20000 && newValue >= 0) {
+        currentMinValue = newValue;
+    }   else if (Math.sign(newValue) == -1 || Math.sign(newValue) == -0 ) {
+        currentMinValue = minValue;
+    } else {
+        currentMinValue = maxValue;
+    }
+};
+    
+const getPositionMinValue = () => (currentMinValue / maxValue) * 100;
+    
+const changeFirstRangeBtn = (e) => {
+    setMinValue(e.target.value)
+        rangeToogleMin.style.left = `${getPositionMinValue()}%`;
+        rangeBar.style.left = `${getPositionMinValue()}%`;
+        rangeBar.style.width = `${getPositionMaxValue() - getPositionMinValue()}%`;
+};
       
-      const changeFirstRangeBtn = (e) => {
-        setMinValue(e.target.value)
-        rangeToogleMin.style.left = `${getPositionMinValue()}%`
-        rangeBar.style.left = `${getPositionMinValue()}%`
-        rangeBar.style.width = `${getPositionMaxValue() - getPositionMinValue()}%`
-      };
-      
-      rangeMinPrice.addEventListener('keyup', (e) => changeFirstRangeBtn(e));
-      
-      rangeMinPrice.addEventListener('change', (e) => changeFirstRangeBtn(e));
+rangeMinPrice.addEventListener('keyup', (e) => changeFirstRangeBtn(e));
+    
+rangeMinPrice.addEventListener('change', (e) => changeFirstRangeBtn(e));
 
