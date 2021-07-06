@@ -25,20 +25,27 @@ const tab = function() {
 
 tab();
 
-const popup = document.getElementById('modal'),  /*popup block*/
-    popupClose = document.getElementById('modal__close'), /*popup close btn*/
-    popupOpen = document.getElementById('modal__open'), /*popup open button*/
-    modalBg = document.getElementById('modal__bg'),
-    submitBtn = document.querySelector('.modal__btn__submit'), //submit modal form btn
-    body = document.getElementById('body');
+const popup = document.getElementById('popup');  /*popup block*/
+const popupClose = document.getElementById('modal__close'); /*popup close btn*/
+const popupOpen = document.getElementById('modal__open'); /*popup open button*/
+const modalBg = document.querySelector('.popup__area');
+const submitBtn = document.querySelector('.modal__btn__submit'); //submit modal form btn
+const body = document.getElementById('body');
+const popupContant = document.querySelector('.popup__content');
 
-const closeModal = () => {
-    popup.classList.remove('modal__show');
+const closeModal = (e) => {
+    e.preventDefault();
+    popup.classList.remove('popup__target');
     body.classList.remove("overflow__body");
+    popupContant.style.opacity = 1;
+    popupContant.style.transform = ('perspective(600px) translate(0px, -100%) rotateX(45deg)');
 };
 
-const openModal = () => {
-    popup.classList.add('modal__show');
+const openModal = (e) => {
+    e.preventDefault();
+    popup.classList.add('popup__target');
+    popupContant.style.opacity = 1;
+    popupContant.style.transform = ('perspective(600px) translate(0px, 0%) rotateX(0deg)');
     body.classList.add("overflow__body");
     modalKeyOpt();
 };
@@ -46,16 +53,16 @@ const openModal = () => {
 function modalKeyOpt () {
     window.onkeydown = ( event ) => {
         if ( event.keyCode == 27 ) {
-            closeModal();
+            closeModal(event);
         } else if (event.keyCode == 13) {
             submitBtn.click();
         }
     };
 };
 
-popupOpen.addEventListener ('click', openModal);
-popupClose.addEventListener('click', closeModal);
-modalBg.addEventListener('click', closeModal);
+popupOpen.addEventListener ('click', (e) => openModal(e));
+popupClose.addEventListener('click', (e) => closeModal(e));
+modalBg.addEventListener('click', (e) => closeModal(e));
 
 //custom Range
 
@@ -114,4 +121,3 @@ const changeFirstRangeBtn = (e) => {
 rangeMinPrice.addEventListener('keyup', (e) => changeFirstRangeBtn(e));
     
 rangeMinPrice.addEventListener('change', (e) => changeFirstRangeBtn(e));
-
