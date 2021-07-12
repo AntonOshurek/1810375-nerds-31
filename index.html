@@ -13,7 +13,7 @@
     
     <!--Style CSS-->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <!--favicon-->
     <link rel="icon" href="favicon.ico">
@@ -171,7 +171,7 @@
                                 <p class="stat__list__text">Соблюдение<br>сроков</p>
                             </li>
                             <li class="stat__list__elem">
-                                <span class="stat__list__procent">500<sup>&percnt;</sup></span>
+                                <span class="stat__list__procent">50<sup>&percnt;</sup></span>
                                 <p class="stat__list__text">Минимальная<br>предоплата</p>
                             </li>
                         </ul>
@@ -258,51 +258,51 @@
         </div>
     </footer>
 
-        <div id="popup" class="popup">
-            <a href="#footer" class="popup__area"></a>
-            <div class="popup__content">
-                <h2 class="visually__hiden">Форма для связи с нами!</h2>
-                <div class="close__modal">
-                    <a href="#footer" id="modal__close" class="close__modal__btn" aria-label="закрыть модальное окно">
-                        <svg aria-hidden="true" focusable="false" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z" fill="#FB565A"/>
-                        </svg>
-                    </a>
-                </div>
-                <form class="modal__form" action="https://echo.htmlacademy.ru/" name="contack__form" method="POST" id="set__mail__form">
-                    <fieldset class="modal__form__fieldset">
-                        <legend class="modal__form__legend">Напишите нам</legend>
-                        <div class="modal__form__block">
-                            <div class="form__name__email">
-                                <div class="modal__form__name">
-                                    <label class="modal__label modal__label__name" for="modal__text">Ваше имя:</label>
-                                    <div>
-                                        <input class="modal__input modal__input__name" type="text" id="modal__text" pattern="[a-zA-Zа-яА-Я\s]+" title="только буквы!" placeholder="Имя Фамилия">
-                                    </div>
-                                </div>
-                                <div class="modal__form__email">
-                                    <label class="modal__label modal__label__email" for="modal__email">Ваш email:</label>
-                                    <div>
-                                        <input class="modal__input modal__input__email" type="email" id="modal__email" placeholder="email@example.com ">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal__form__text">
-                                <label class="modal__label modal__label__textarea" for="text_mail">Текст письма:</label>
+    <div id="popup" class="popup">
+        <a href="#footer" class="popup__area"></a>
+        <div class="popup__content">
+            <h2 class="visually__hiden">Форма для связи с нами!</h2>
+            <div class="close__modal">
+                <a href="#footer" id="modal__close" class="close__modal__btn" aria-label="закрыть модальное окно">
+                    <svg aria-hidden="true" focusable="false" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z" fill="#FB565A"/>
+                    </svg>
+                </a>
+            </div>
+            <form class="modal__form" action="https://echo.htmlacademy.ru/" name="contack__form" method="POST" id="set__mail__form">
+                <fieldset class="modal__form__fieldset">
+                    <legend class="modal__form__legend">Напишите нам</legend>
+                    <div class="modal__form__block">
+                        <div class="form__name__email">
+                            <div class="modal__form__name">
+                                <label class="modal__label modal__label__name" for="modal__text">Ваше имя:</label>
                                 <div>
-                                    <textarea class="modal__input__textarea modal__input" name="text_mail" id="text_mail" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                                    <input class="modal__input modal__input__name" type="text" id="modal__text" pattern="[a-zA-Zа-яА-Я\s]+" title="только буквы!" placeholder="Имя Фамилия">
                                 </div>
                             </div>
-                            <div class="modal__btn__block">
-                                <button class="modal__btn__submit standart__btn" type="submit" id="submit__modal">Отправить</button>
+                            <div class="modal__form__email">
+                                <label class="modal__label modal__label__email" for="modal__email">Ваш email:</label>
+                                <div>
+                                    <input class="modal__input modal__input__email" type="email" id="modal__email" placeholder="email@example.com ">
+                                </div>
                             </div>
                         </div>
-                    </fieldset>
-                </form>
-            </div>
+                        <div class="modal__form__text">
+                            <label class="modal__label modal__label__textarea" for="text_mail">Текст письма:</label>
+                            <div>
+                                <textarea class="modal__input__textarea modal__input" name="text_mail" id="text_mail" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal__btn__block">
+                            <button class="modal__btn__submit standart__btn" type="submit" id="submit__modal">Отправить</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
         </div>
+    </div>
     
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>

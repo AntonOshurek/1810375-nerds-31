@@ -80,16 +80,11 @@ function checkEmail(email) {
 }
 
 footerForm.addEventListener('submit', (e) => {
-    if (!modalText.value || !modalEmailInput.value) {
+    if ((!modalText.value || !modalEmailInput.value) || (!checkEmail(modalEmailInput.value))) {
         e.preventDefault();      
-       popupContant.classList.add('modal__error');  
-        //popupContant.offsetWidth = popupContant.offsetWidth;
-        //popupContant.classList.remove('modal__error');
-    } else if (!checkEmail(modalEmailInput.value)) {
-        e.preventDefault();
-        console.log('no');
-    } else {
-        console.log('done');
+        popupContant.classList.remove('modal__error');
+        popupContant.offsetWidth = popupContant.offsetWidth;
+        popupContant.classList.add('modal__error');  
     }
 })
 
