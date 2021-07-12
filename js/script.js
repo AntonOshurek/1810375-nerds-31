@@ -38,19 +38,17 @@ const modalFocusInput = document.getElementById('modal__text');
 
 const closeModal = (e) => {
     e.preventDefault();
-    popup.classList.remove('popup__target');
+    popup.classList.remove('popup__show');
     body.classList.remove("overflow__body");
+    popupContant.classList.remove('popup__target');
     popupContant.classList.remove('modal__error'); 
-    popupContant.style.opacity = 1;
-    popupContant.style.transform = ('perspective(600px) translate(0px, -100%) rotateX(45deg)');
 };
 
 const openModal = (e) => {
     e.preventDefault();
-    popup.classList.add('popup__target');
+    popup.classList.add('popup__show');
+    popupContant.classList.add('popup__target');
     modalFocusInput.focus();
-    popupContant.style.opacity = 1;
-    popupContant.style.transform = ('perspective(600px) translate(0px, 0%) rotateX(0deg)');
     body.classList.add("overflow__body");
     
     modalKeyOpt();
@@ -84,9 +82,9 @@ function checkEmail(email) {
 footerForm.addEventListener('submit', (e) => {
     if (!modalText.value || !modalEmailInput.value) {
         e.preventDefault();      
-        popupContant.classList.add('modal__error');  
-        popupContant.offsetWidth = popupContant.offsetWidth;
-        popupContant.classList.remove('modal__error'); 
+       popupContant.classList.add('modal__error');  
+        //popupContant.offsetWidth = popupContant.offsetWidth;
+        //popupContant.classList.remove('modal__error');
     } else if (!checkEmail(modalEmailInput.value)) {
         e.preventDefault();
         console.log('no');
