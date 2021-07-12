@@ -13,7 +13,7 @@
     
     <!--Style CSS-->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!--favicon-->
     <link rel="icon" href="favicon.ico">
@@ -258,9 +258,8 @@
         </div>
     </footer>
 
-    <div id="popup" class="popup">
-        <a href="#footer" class="popup__area"></a>
-        <div class="popup__body">
+        <div id="popup" class="popup">
+            <a href="#footer" class="popup__area"></a>
             <div class="popup__content">
                 <h2 class="visually__hiden">Форма для связи с нами!</h2>
                 <div class="close__modal">
@@ -270,8 +269,7 @@
                         </svg>
                     </a>
                 </div>
-
-                <form class="modal__form" action="https://echo.htmlacademy.ru/" name="contack__form" method="POST">
+                <form class="modal__form" action="https://echo.htmlacademy.ru/" name="contack__form" method="POST" id="set__mail__form">
                     <fieldset class="modal__form__fieldset">
                         <legend class="modal__form__legend">Напишите нам</legend>
                         <div class="modal__form__block">
@@ -279,7 +277,7 @@
                                 <div class="modal__form__name">
                                     <label class="modal__label modal__label__name" for="modal__text">Ваше имя:</label>
                                     <div>
-                                        <input class="modal__input modal__input__name" type="text" id="modal__text" placeholder="Имя Фамилия">
+                                        <input class="modal__input modal__input__name" type="text" id="modal__text" pattern="[a-zA-Zа-яА-Я\s]+" title="только буквы!" placeholder="Имя Фамилия">
                                     </div>
                                 </div>
                                 <div class="modal__form__email">
@@ -296,16 +294,15 @@
                                 </div>
                             </div>
                             <div class="modal__btn__block">
-                                <button class="modal__btn__submit standart__btn" type="submit">Отправить</button>
+                                <button class="modal__btn__submit standart__btn" type="submit" id="submit__modal">Отправить</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </div>
-    </div>
     
-    <script src="js/script.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

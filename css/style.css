@@ -50,6 +50,8 @@
     --grey-b4: #B4B9BB;
     --grey-cf: #cfcfcf;
     --grey-ab: #ababab;
+    --grey-c1: #C1C1C1;
+    --grey-88: #888888;
     --lazy-reed: #FB565A;
     --active-red: #E74246;
     --dark-red: #D7373B;
@@ -153,6 +155,9 @@
 
 .contact__block .contact__block__map{
     width: 100%;
+    background-image: url(../img/footer_map.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .footer__contacts {
@@ -371,7 +376,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    border: 2px solid #C1C1C1;
+    border: 2px solid var(--grey-c1);
     left: 4px;
     top: 4px;
 }
@@ -942,8 +947,8 @@
 
 .list__elem__img {
     background-color: var(--grey-d5);
-    -webkit-box-shadow: 0px 3px 6px 1px #888888;
-            box-shadow: 0px 3px 6px 1px #888888;
+    -webkit-box-shadow: 0px 3px 6px 1px var(--grey-88);
+            box-shadow: 0px 3px 6px 1px var(--grey-88);
     -o-object-fit: cover;
        object-fit: cover;
 }
@@ -1152,7 +1157,7 @@
             transform: translateY(-50%);
     height: 2px;
     width: 100%;
-    background-color: #00CA74;
+    background-color: var(--green-standart);
 }
   
 .range__controls .toggle {
@@ -1364,13 +1369,14 @@
     top: 0;
     left: 0;
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     visibility: hidden;
-    
-    /*-webkit-transition: all 0.8s ease 0s;
-    
+   -webkit-transition: all 0.8s ease 0s;
     -o-transition: all 0.8s ease 0s;
-    
-    transition: all 0.8s ease 0s;*/
+    transition: all 0.8s ease 0s;
 }
 
 .popup:target {
@@ -1387,6 +1393,17 @@
     -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
             transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
     opacity: 1;
+    /*animation: modalopen 1s;*/
+}
+
+@keyframes modalopen {
+    from {
+        transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+        opacity: 0;
+    } to {
+        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        opacity: 1;
+    }
 }
 
 .popup__area {
@@ -1397,7 +1414,7 @@
     left: 0;
 }
 
-.popup__body {
+/*.popup__body {
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -1409,12 +1426,12 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-}
+}*/
 
 .popup__content {
     position: relative;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--standart-white);
+    color: var(--standart-black);
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
@@ -1427,16 +1444,15 @@
     -webkit-box-shadow: 0px 20px 40px var(--black-opacity4);
             box-shadow: 0px 20px 40px var(--black-opacity4);
     background-color: var(--standart-white);
-    position: relative;
     overflow: auto;
 
-    -webkit-transition: all 0.8s ease 0s;
+   -webkit-transition: all 0.8s ease 0s;
 
     -o-transition: all 0.8s ease 0s;
 
     transition: all 0.8s ease 0s;
     opacity: 0;                   
-    -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);                   
+   -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);                   
             transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
 
@@ -1545,6 +1561,10 @@
     border: 2px solid var(--standart-black);
 }
 
+.modal__input:invalid{
+    border: 2px solid var(--dark-red);
+}
+
 .modal__form__text {
     margin-bottom: 35px;
 }
@@ -1552,7 +1572,7 @@
 .modal__input__textarea {
     width: 760px;
     height: 118px;
-    background: #FFFFFF;
+    background: var(--standart-white);
     border: 2px solid var(--white-d7);
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1568,3 +1588,29 @@
     padding: 17px 83px 15px 83px;
     text-transform: uppercase;
 }
+
+.modal__error {
+    animation: shake 0.6s;
+};
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-100px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(100px);
+    }
+  };

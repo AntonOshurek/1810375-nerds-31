@@ -25,6 +25,8 @@ const tab = function() {
 
 tab();
 
+//popup 
+
 const popup = document.getElementById('popup');  /*popup block*/
 const popupClose = document.getElementById('modal__close'); /*popup close btn*/
 const popupOpen = document.getElementById('modal__open'); /*popup open button*/
@@ -32,11 +34,13 @@ const modalBg = document.querySelector('.popup__area');
 const submitBtn = document.querySelector('.modal__btn__submit'); //submit modal form btn
 const body = document.getElementById('body');
 const popupContant = document.querySelector('.popup__content');
+const modalFocusInput = document.getElementById('modal__text');
 
 const closeModal = (e) => {
     e.preventDefault();
     popup.classList.remove('popup__target');
     body.classList.remove("overflow__body");
+    popupContant.classList.remove('modal__error'); 
     popupContant.style.opacity = 1;
     popupContant.style.transform = ('perspective(600px) translate(0px, -100%) rotateX(45deg)');
 };
@@ -44,9 +48,11 @@ const closeModal = (e) => {
 const openModal = (e) => {
     e.preventDefault();
     popup.classList.add('popup__target');
+    modalFocusInput.focus();
     popupContant.style.opacity = 1;
     popupContant.style.transform = ('perspective(600px) translate(0px, 0%) rotateX(0deg)');
     body.classList.add("overflow__body");
+    
     modalKeyOpt();
 };
 
@@ -63,6 +69,31 @@ function modalKeyOpt () {
 popupOpen.addEventListener ('click', (e) => openModal(e));
 popupClose.addEventListener('click', (e) => closeModal(e));
 modalBg.addEventListener('click', (e) => closeModal(e));
+
+//valid popup form
+
+const modalEmailInput = document.getElementById('modal__email');
+const footerForm = document.getElementById('set__mail__form');
+const modalText = document.getElementById('modal__text');
+
+function checkEmail(email) {
+    let reg = /^[a-z0-9_][a-z0-0\._-]*[a-z0-9_]*@([a-z0-9]+[a-z0-9_-]*[a-z0-9]+\.)+[a-z0-9]+$/i;
+    return email.match(reg);
+}
+
+footerForm.addEventListener('submit', (e) => {
+    if (!modalText.value || !modalEmailInput.value) {
+        e.preventDefault();      
+        popupContant.classList.add('modal__error');  
+        popupContant.offsetWidth = popupContant.offsetWidth;
+        popupContant.classList.remove('modal__error'); 
+    } else if (!checkEmail(modalEmailInput.value)) {
+        e.preventDefault();
+        console.log('no');
+    } else {
+        console.log('done');
+    }
+})
 
 //custom Range
 
